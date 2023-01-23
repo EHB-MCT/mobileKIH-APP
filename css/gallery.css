@@ -1,0 +1,46 @@
+@import url('../css/styles.css');
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#filterButton {
+    padding: 10px 20px;
+    border: 2px solid #00bd83;
+    background-color: transparent;
+    color: #00bd83;
+}
+
+#filterButton :hover {
+    background-color: #00bd83 !important;
+    color: black !important;
+}
+
+.filterSlideDiv {
+    position: absolute;
+    /*     turn top to 0 */
+    top: 200px;
+    z-index: 1;
+    width: 100%;
+    right: -100%;
+    background-color: #f3f0ec;
+    height: 100%;
+    overflow: auto;
+}
