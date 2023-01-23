@@ -1,0 +1,121 @@
+  /* TITLE FONT */
+@font-face {
+    font-family: 'Clearface';
+    src: url('/fonts/Clearface.ttf');
+    src: local('Clearface'),
+         url('/fonts/Clearface.ttf'),
+         format('truetype');
+  }
+  /* TEXT FONT */
+  @font-face {
+    font-family: 'Maison';
+    src: url('/fonts/Maison-Neue-Book.ttf');
+    src: local('Maison'),
+         url('/fonts/Maison-Neue-Book.ttf'),
+         format('truetype');
+  }
+/****************************************************************************/
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    background: #f3f0ec;
+    color: #000000;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .5s ease;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0px 30px;
+    padding: 5px 0px;
+    transition: all 0.5s ease;
+}
+.navbar a:hover{
+    color: #00bd83;
+}
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: #000000;
+    font-size: 30px;
+    transition: all 0.5s ease;
+}
+#menu-icon{
+    font-size: 40px;
+    color: #000000;
+    cursor: pointer;
+    z-index: 10001;
+    background-color: #00bd83;
+    padding: 5px;
+    display: none;
+}
+
+@media(max-width: 1280px){
+    header{
+        padding: 0px 0%;
+        transition: 0.2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+@media(max-width: 1090px){
+    #menu-icon{
+        display: block;
+        
+    }
+    .navbar{
+        position: absolute;
+        top: -1000%;
+        width: 50px;
+        left: 0%;
+        height: 400px;
+        background-color: #080809;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all 0.5s ease;
+        padding-top: 50px;
+
+
+    }
+    .navbar a{
+        display: block;
+        margin: 15px 0px ;
+        padding: 0px 10px;
+        transition: all 0.1s;
+    }
+    .navbar a:hover{
+        color: #00bd83;
+    }
+    .navbar.open{
+        top: 0%;
+    }
+}
