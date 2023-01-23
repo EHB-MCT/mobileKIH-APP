@@ -42,6 +42,14 @@ header{
     padding: 28px 12%;
     transition: all .5s ease;
 }
+h1{
+	font-size: 30px;
+	font-weight: 100;
+	padding: 15px 15px 10px 45px;
+	width: 35%;
+	margin-top: 50px;
+	background-color: #CBD5FF;
+}
 .navbar{
     display: flex;
 }
@@ -75,7 +83,75 @@ header{
     padding: 5px;
     display: none;
 }
+/**********************************LOGIN FORM**********************************************/
+.formlogin{
+	font-family: 'Maison', sans-serif;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  font-size: 15px;
+  opacity: 80%;
+  padding: 12px 0px;
+  margin: 22px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.fieldfont{
+	width: 100%;
+	border: 0;	
+	border-bottom: 1px solid;
+	outline: 0;
+	background: transparent;
+}
+.textfieldform{
+	padding: 24px 15px 0px 15px;
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+}
+button {
+  background-color: #00bd83;
+  color: #080809;
+  padding: 15px 15px;
+  margin: 50px 0 0 0;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 37%;
+}
+.buttonform{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+button:hover {
+  opacity: 0.8;
+}
+.imgcontainer {
+  text-align: center;
+  background-color: #080809;
+  padding-top: 40px;
+  margin: 0px 0 0 0;
+}
 
+img.avatar {
+  width: 90%;
+  background-color: #080809;
+}
+
+.bottomform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span.psw {
+  float: left;
+  padding-top: 16px;
+}
+.fdpforgot{
+	color: #00bd83;
+}
+/**********************************LOGIN FORM**********************************************/
 @media(max-width: 1280px){
     header{
         padding: 0px 0%;
