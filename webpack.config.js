@@ -5,7 +5,8 @@ module.exports = {
 
     index: './src/index.js',
 
-	
+    loginRegister: './src/loginRegister.js'
+
   },
   output: {
     filename: '[name].js',
@@ -14,11 +15,9 @@ module.exports = {
   mode: 'development',
   watch: true,
   module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
+    rules: [{
+      test: /\.css$/i,
+      use: ["style-loader", "css-loader"],
+    }, ],
   },
 };

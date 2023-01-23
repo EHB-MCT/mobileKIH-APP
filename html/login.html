@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <title>KIH</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <title>KIH</title>
 </head>
+
 <body>
-    <header>
-        <ul class="navbar">
-            <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
-            <li><a href="#"><i class="ri-search-2-line"></i></a></li>
-            <li><a href="#"><i class="ri-tv-line"></i></a></li>
-            <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-            <li><a href="#"><i class="ri-account-circle-fill"></i></a></li>
-        </ul>
-        <div class="main">
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </div>
-    </header>
-	<form class="formlogin" action="/action_page.php" method="post">
-		<div class="imgcontainer">
-			<img src="/images/KIHLOGOHOR.png" alt="Avatar" class="avatar">
-		  </div>
-		  <div>
-			<h1>LOGIN</h1>
-		  </div>	  
-		<div class="textfieldform">
-		  <input class="fieldfont" type="text" placeholder="Email" name="uname" required>
-		  <input class="fieldfont" type="password" placeholder="Password" name="psw" required>
-		  <div class="buttonform">
-			<button type="submit">LOGIN</button>
-		  </div>	  
-		</div>
-	  
-		<div class="bottomform" style="background-color:#f1f1f1">
-		  <span class="psw">New here? <a class="fdpforgot" href="signup.html">Sign up?</a></span>
-		</div>
-	  </form>
-    <script type="text/javascript" src="/js/script.js"></script>
+  <header>
+    <ul class="navbar">
+      <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
+      <li><a href="#"><i class="ri-search-2-line"></i></a></li>
+      <li><a href="#"><i class="ri-tv-line"></i></a></li>
+      <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+      <li><a href="#"><i class="ri-account-circle-fill"></i></a></li>
+    </ul>
+    <div class="main">
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+  </header>
+  <form class="formlogin" id="signup_form">
+    <div class="imgcontainer">
+      <img src="/images/KIHLOGOHOR.png" alt="Avatar" class="avatar">
+    </div>
+    <div>
+      <h1>LOGIN</h1>
+    </div>
+    <div class="textfieldform">
+      <input class="fieldfont" type="text" placeholder="Email" name="uname" id="login_email" required>
+      <input class="fieldfont" type="password" placeholder="Password" name="psw" id="login_password" required>
+      <div class="buttonform">
+        <button type="submit" id=login_button>LOGIN</button>
+      </div>
+    </div>
+
+    <div class="bottomform" style="background-color:#f1f1f1">
+      <span class="psw">New here? <a class="fdpforgot" href="signup.html">Sign up?</a></span>
+    </div>
+  </form>
+  <script type="text/javascript" src="/js/script.js"></script>
+  <script type="text/javascript" src="../dist/loginRegister.js"></script>
 </body>
+
 </html>
