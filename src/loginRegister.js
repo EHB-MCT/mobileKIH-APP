@@ -1,6 +1,5 @@
-const BASE_URL = "http://localhost:3001/"
-console.log("tero bau")
-console.log("hello")
+const BASE_URL = "http://localhost:3001/";
+
 document.getElementById('login_button').addEventListener('click', (event) => {
     event.preventDefault();
     console.log('submitted');
@@ -13,7 +12,6 @@ document.getElementById('login_button').addEventListener('click', (event) => {
 });
 document.getElementById('signup_button').addEventListener('click', (event) => {
     event.preventDefault();
-
     const user = {
         email: document.getElementById('login_email').value,
         password: document.getElementById('login_password').value,
