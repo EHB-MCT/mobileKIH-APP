@@ -10,38 +10,96 @@
 </head>
 
 <body>
-    <header>
-        <h1>Gallery</h1>
-    </header>
-    <div>
-        <button class="button" id="filterButton">Filter</button>
-    </div>
-    <div class="filter">
-        <!-- selected filters come here -->
-    </div>
-    <div class="filterSlideDiv">
-        <h2>Filters</h2>
-        <p>kaka</p>
-        <p class="goBackButton">going back</p>
-    </div>
-    <div class="row">
-        <div class="column">
-            <img src="../images/basantapur.jpg">
-            <img src="../images/airah-waw.png">
-            <img src="../images/Buenos dias.jpg">
-            <img src="../images/blush.jpg">
-            <img src="../images/HASBULLAH.jpg">
-            <img src="../images/shrek.jpg">
+
+    <h1>Gallery</h1>
+    <div class="wrapper">
+        <div>
+            <button class="button" id="filterButton">Filter</button>
         </div>
-        <div class="column">
-            <img src="../images/blush.jpg">
-            <img src="../images/HASBULLAH.jpg">
-            <img src="../images/shrek.jpg">
-            <img src="../images/basantapur.jpg">
-            <img src="../images/airah-waw.png">
-            <img src="../images/Buenos dias.jpg">
+        <div class="selectedFilters">
+            <!-- selected filters come here -->
+        </div>
+        <div class="filterSlideDiv" id="filterSlideDiv">
+            <h2>Filters</h2>
+            <p>kaka</p>
+            <div id="goBackButton">
+                <!--    button goes here -->
+                <p class="goBackButton">going back</p>
+            </div>
+
+            <div class="filter">
+                <div class="filter__section">
+                    <div class="filter__section__title">
+                        <h3>Type</h3>
+                        <div class="toggle">
+                            <!--  here goes toggle button -->
+                        </div>
+                    </div>
+                    <div class="filter__section__filters">
+                        <p>3D</p>
+                        <p>Digital painting</p>
+                        <p>Audio</p>
+                        <p>Video</p>
+                    </div>
+                </div>
+                <div class="filter__section">
+                    <div class="filter__section__title">
+                        <h3>Artist</h3>
+                        <div class="toggle">
+                            <!--  here goes toggle button -->
+                        </div>
+                    </div>
+                    <div class="filter__section__filters">
+                        <p>Xavier Wttrwulghe</p>
+                        <p>Hakan Portakal </p>
+                        <p>Géraldine Ragon </p>
+                        <p>j-fhocq</p>
+                        <p>Gaudi .C </p>
+                    </div>
+                </div>
+                <div class="filter__section">
+                    <div class="filter__section__title">
+                        <h3>Subject</h3>
+                        <div class="toggle">
+                            <!--  here goes toggle button -->
+                        </div>
+                    </div>
+                    <div class="filter__section__filters">
+                        <p>Architecture</p>
+                        <p>Botanic</p>
+                        <p>Landscape</p>
+                        <p>Animal</p>
+                        <p>Typgraphy</p>
+                        <p>Map</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filters__endButton">
+                <button class="button">CLEAR</button>
+                <button class="button">APPLY</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="../images/basantapur.jpg">
+                <img src="../images/airah-waw.png">
+                <img src="../images/Buenos dias.jpg">
+                <img src="../images/blush.jpg">
+                <img src="../images/HASBULLAH.jpg">
+                <img src="../images/shrek.jpg">
+            </div>
+            <div class="column">
+                <img src="../images/blush.jpg">
+                <img src="../images/HASBULLAH.jpg">
+                <img src="../images/shrek.jpg">
+                <img src="../images/basantapur.jpg">
+                <img src="../images/airah-waw.png">
+                <img src="../images/Buenos dias.jpg">
+            </div>
         </div>
     </div>
+    <script src="../js/gallery.js"></script>
 </body>
 
 </html>

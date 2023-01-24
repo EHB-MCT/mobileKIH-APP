@@ -1,35 +1,43 @@
   /* TITLE FONT */
-@font-face {
+  @font-face {
     font-family: 'Clearface';
     src: url('/fonts/Clearface.ttf');
     src: local('Clearface'),
-         url('/fonts/Clearface.ttf'),
-         format('truetype');
+      url('/fonts/Clearface.ttf'),
+      format('truetype');
   }
+
   /* TEXT FONT */
   @font-face {
     font-family: 'Maison';
     src: url('/fonts/Maison-Neue-Book.ttf');
     src: local('Maison'),
-         url('/fonts/Maison-Neue-Book.ttf'),
-         format('truetype');
+      url('/fonts/Maison-Neue-Book.ttf'),
+      format('truetype');
   }
-/****************************************************************************/
 
-*{
+  /****************************************************************************/
+
+  * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
-}
+  }
 
-body{
+
+  body {
     min-height: 100vh;
     background: #f3f0ec;
     color: #000000;
-}
-header{
+  }
+
+  .wrapper {
+    margin: 0 5% 0 5%;
+  }
+
+  header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -41,49 +49,63 @@ header{
     background: transparent;
     padding: 28px 12%;
     transition: all .5s ease;
-}
-h1{
-	font-size: 30px;
-	font-weight: 100;
-	padding: 15px 15px 10px 45px;
-	width: 50%;
-	margin-top: 50px;
-	background-color: #CBD5FF;
-}
-h2{
-	font-size: 25px;
-	font-family: 'Clearface';
-	font-weight: 100;
-	padding: 10px 15px 10px 35px;
-	width: 53%;
-	margin-top: 80px;
-	background-color: #CBD5FF;
-}
-.navbar{
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 100;
+    padding: 15px 15px 10px 5%;
+    width: 50%;
+    margin-top: 50px;
+    background-color: #CBD5FF;
+  }
+
+  h2 {
+    font-size: 25px;
+    font-family: 'Clearface';
+    font-weight: 100;
+    padding: 10px 15px 10px 35px;
+    width: 53%;
+    margin-top: 80px;
+    background-color: #CBD5FF;
+  }
+
+  h3,
+  p,
+  button {
+    font-family: 'Maison';
+  }
+
+  .navbar {
     display: flex;
-}
-.navbar a{
+  }
+
+  .navbar a {
     color: #ffffff;
     font-size: 30px;
     margin: 0px 30px;
     padding: 5px 0px;
     transition: all 0.5s ease;
-}
-.navbar a:hover{
+  }
+
+  .navbar a:hover {
     color: #00bd83;
-}
-.main{
+  }
+
+  .main {
     display: flex;
     align-items: center;
-}
-.main a{
+  }
+
+  .main a {
     margin-right: 25px;
     margin-left: 10px;
     color: #000000;
     font-size: 30px;
     transition: all 0.5s ease;
-}
-#menu-icon{
+  }
+
+  #menu-icon {
     font-size: 40px;
     color: #000000;
     cursor: pointer;
@@ -91,156 +113,174 @@ h2{
     background-color: #00bd83;
     padding: 5px;
     display: none;
-}
-/**********************************LOGIN FORM**********************************************/
-.formlogin{
-	font-family: 'Maison', sans-serif;
-}
-input[type=text], input[type=password] {
-  width: 100%;
-  font-size: 15px;
-  opacity: 80%;
-  padding: 12px 0px;
-  margin: 22px 0;
-  display: inline-block;
-  box-sizing: border-box;
-}
-.fieldfont{
-	width: 100%;
-	border: 0;	
-	border-bottom: 1px solid;
-	outline: 0;
-	background: transparent;
-}
-.textfieldform{
-	padding: 24px 15px 0px 15px;
-	position: relative;
-	margin-top: 10px;
-	width: 100%;
-}
-button {
-  background-color: #00bd83;
-  color: #080809;
-  padding: 15px 15px;
-  margin: 25px 0 10px 0;
-  border: none;
-  font-size: 19px;
-  cursor: pointer;
-  width: 37%;
-}
-.buttonform{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-button:hover {
-  opacity: 0.8;
-}
-.imgcontainer {
-  text-align: center;
-  background-color: #080809;
-  padding-top: 40px;
-  margin: 0px 0 0 0;
-}
+  }
 
-img.avatar {
-  width: 90%;
-  background-color: #080809;
-}
+  /**********************************LOGIN FORM**********************************************/
+  .formlogin {
+    font-family: 'Maison', sans-serif;
+  }
 
-.bottomform {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-span.psw {
-	background: #f3f0ec;
-  float: left;
-  padding-top: 16px;
-  margin-bottom: 15px;
-}
-.fdpforgot{
-	color: #00bd83;
-}
-/**********************************LOGIN FORM**********************************************/
-@media(max-width: 1280px){
-    header{
-        padding: 0px 0%;
-        transition: 0.2s;
-    }
-    .navbar a{
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
-}
-@media(max-width: 1090px){
-    #menu-icon{
-        display: block;
-        
-    }
-    .navbar{
-        position: absolute;
-        top: -1000%;
-        width: 50px;
-        left: 0%;
-        height: 400px;
-        background-color: #080809;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        transition: all 0.5s ease;
-        padding-top: 50px;
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    font-size: 15px;
+    opacity: 80%;
+    padding: 12px 0px;
+    margin: 22px 0;
+    display: inline-block;
+    box-sizing: border-box;
+  }
 
+  .fieldfont {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid;
+    outline: 0;
+    background: transparent;
+  }
+
+  .textfieldform {
+    padding: 24px 15px 0px 15px;
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .button {
+    background-color: #00bd83;
+    color: #080809;
+    padding: 15px 15px;
+    margin: 25px 0 10px 0;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+  }
+
+  .buttonform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    background-color: #080809;
+    padding-top: 40px;
+    margin: 0px 0 0 0;
+  }
+
+  img.avatar {
+    width: 90%;
+    background-color: #080809;
+  }
+
+  .bottomform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span.psw {
+    background: #f3f0ec;
+    float: left;
+    padding-top: 16px;
+    margin-bottom: 15px;
+  }
+
+  .fdpforgot {
+    color: #00bd83;
+  }
+
+  /**********************************LOGIN FORM**********************************************/
+  @media(max-width: 1280px) {
+    header {
+      padding: 0px 0%;
+      transition: 0.2s;
+    }
+
+    .navbar a {
+      padding: 5px 0;
+      margin: 0px 20px;
+    }
+  }
+
+  @media(max-width: 1090px) {
+    #menu-icon {
+      display: block;
 
     }
-    .navbar a{
-        display: block;
-        margin: 15px 0px ;
-        padding: 0px 10px;
-        transition: all 0.1s;
-    }
-    .navbar a:hover{
-        color: #00bd83;
-    }
-    .navbar.open{
-        top: 0%;
-    }
-}
 
-.swiper {
-	width: 100%;
-	height: 120px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+    .navbar {
+      position: absolute;
+      top: -1000%;
+      width: 50px;
+      left: 0%;
+      height: 400px;
+      background-color: #080809;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: all 0.5s ease;
+      padding-top: 50px;
+
+
+    }
+
+    .navbar a {
+      display: block;
+      margin: 15px 0px;
+      padding: 0px 10px;
+      transition: all 0.1s;
+    }
+
+    .navbar a:hover {
+      color: #00bd83;
+    }
+
+    .navbar.open {
+      top: 0%;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	width: 100%;
-	height: 120px;
-	/* Center slide text vertically */
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 100%;
+    height: 120px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
   }
 
-  .swiper > .swiper-wrapper {
-	transition-timing-function: linear;
+  .swiper>.swiper-wrapper {
+    transition-timing-function: linear;
   }
+
   .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
