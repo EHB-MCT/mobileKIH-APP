@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h2>Text input fields</h2>
+
+    <form id="nico" method="POST" enctype="multipart/form-data" action="http://localhost:3001/addArt">
+        <label for="fname">Name:</label><br>
+        <input type="text" id="name_art" name="name_art" value=""><br>
+        <label for="lname">description:</label><br>
+        <input type="text" id="description_art" name="description_art" value="">
+        <br>
+
+        <label for="cars">Choose a Genre:</label>
+
+        <select name="genre" id="genre">
+            <option value="1">3D</option>
+            <option value="2">Audio</option>
+            <option value="3">Video</option>
+            <option value="4">2D Art</option>
+        </select>
+
+
+
+        <label for="cars">Choose a Style:</label>
+
+        <select name="style" id="style">
+            <option value="1">Fine Art</option>
+            <option value="2">Pixel Art</option>
+            <option value="3">Abstract</option>
+            <option value="4">Pop Art</option>
+            <option value="5">Geometric</option>
+            <option value="6">Data Moshing</option>
+            <option value="7">Algorithmic Art</option>
+            <option value="8">Fractal Art</option>
+            <option value="9">CGI Art</option>
+        </select>
+
+
+        <label for="cars">Choose a Subject:</label>
+
+        <select name="subject" id="subject">
+            <option value="1">Botanical</option>
+            <option value="2">Landscape</option>
+            <option value="3">Animal</option>
+            <option value="4">Typography</option>
+            <option value="5">Architecture</option>
+            <option value="6">Map</option>
+        </select><br>
+
+        <label for="fname">Name art:</label><br>
+        <input type="text" id="namefile" name="namefile" value=""><br>
+
+        <label for="fname">ext:</label><br>
+        <input type="text" id="ext" name="ext" value=""><br>
+        <input id="file" name="file" type="file" />
+        <br>
+
+        <input type="submit" value="tet">
+    </form>
+    <script>
+
+        var input = document.getElementById('file');
+        let test = null
+        function readFile(event) {
+            test = event
+            const formData = new FormData(document.getElementById('nico'));
+            formData.append("file a", test, "yasminalahmara");
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:3001/addArt',
+                data: formData,
+                processData: false,
+                contentType: false
+            }).done(function (data) {
+                console.log(data);
+            });
+        }
+
+        function changeFile() {
+            var file = input.files[0];
+            var reader = new FileReader();
+            readFile(file)
+        }
+
+        input.addEventListener('change', changeFile);
+    </script>
+</body>
+
+</html>
