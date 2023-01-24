@@ -17,7 +17,7 @@
         <div>
             <button class="button" id="filterButton">Filter</button>
         </div>
-        <div class="selectedFilters">
+        <div id="selectedFilters">
             <!-- selected filters come here -->
         </div>
         <div class="filterSlideDiv" id="filterSlideDiv">
@@ -35,11 +35,11 @@
                         <div class="toggle">
                             <i class='bx bx-chevron-left'></i> </div>
                     </div>
-                    <div class="filter__section__filters">
-                        <p>3D</p>
-                        <p>Digital painting</p>
-                        <p>Audio</p>
-                        <p>Video</p>
+                    <div class="filter__section__filters" id="type">
+                        <p id="3D">3D</p>
+                        <p id="Digital Painting">Digital painting</p>
+                        <p id="Audio">Audio</p>
+                        <p id="Video">Video</p>
                     </div>
                 </div>
                 <div class="filter__section">
@@ -49,33 +49,33 @@
                             <i class='bx bx-chevron-left'></i> </div>
                     </div>
 
-                    <div class="filter__section__filters">
-                        <p>Xavier Wttrwulghe</p>
-                        <p>Hakan Portakal </p>
-                        <p>Géraldine Ragon </p>
-                        <p>j-fhocq</p>
-                        <p>Gaudi .C </p>
+                    <div class="filter__section__filters" id="artist">
+                        <p id="Xavier Wttrwulghe">Xavier Wttrwulghe</p>
+                        <p id=" Hakan Portakal">Hakan Portakal</p>
+                        <p id="Géraldine Ragon">Géraldine Ragon</p>
+                        <p id="j-fhocq">j-fhocq</p>
+                        <p id="Gaudi .C">Gaudi .C </p>
                     </div>
                 </div>
                 <div class="filter__section">
                     <div class="filter__section__title">
                         <h3>Subject</h3>
                         <div class="toggle">
-                            <i class='bx bx-chevron-left'></i> </div>
+                            <i class='bx bx-chevron-left' id="subject"></i> </div>
                     </div>
 
                     <div class="filter__section__filters">
-                        <p>Architecture</p>
-                        <p>Botanic</p>
-                        <p>Landscape</p>
-                        <p>Animal</p>
-                        <p>Typgraphy</p>
-                        <p>Map</p>
+                        <p id="Architectur">Architecture</p>
+                        <p id=" Botanic">Botanic</p>
+                        <p id="Landscape">Landscape</p>
+                        <p id="Animal">Animal</p>
+                        <p id="Typgraphy">Typgraphy</p>
+                        <p id="Map">Map</p>
                     </div>
                 </div>
                 <div class="filters__endButton">
-                    <button class="button">CLEAR</button>
-                    <button class="button">APPLY</button>
+                    <button class="button" id="filter_clearButton">CLEAR</button>
+                    <button class="button" id="filter_applyButton">APPLY</button>
                 </div>
             </div>
         </div>
