@@ -50,11 +50,6 @@
     transition: 0.2s;
 }
 
-.bx-chevron-left--on {
-    transform: rotate(-180deg);
-    transition: 0.2s;
-}
-
 #selectedFilters {
     display: flex;
     flex-wrap: wrap;

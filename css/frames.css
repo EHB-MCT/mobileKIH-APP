@@ -1,0 +1,60 @@
+@import url('../css/styles.css');
+
+.room__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.room__frames {
+    display: flex;
+}
+
+
+.room__frames {
+    display: none;
+}
+
+.plus {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.rooms {
+    margin-top: 30px;
+}
+
+.room__frames--selected {
+    display: flex;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 30%;
+    padding: 20px;
+    margin-right: 15px;
+    background-color: white;
+    filter: drop-shadow(0 0.15rem 0.12rem rgb(176, 176, 176));
+}
+
+.frame p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.frame i {
+    font-size: 35px;
+    transform: translateY(5px);
+}
+
+.settings {
+    position: relative;
+    font-size: 20px !important;
+    top: -20px;
+    left: -50%;
+}
