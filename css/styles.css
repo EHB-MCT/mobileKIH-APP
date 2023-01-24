@@ -57,7 +57,13 @@ h2{
 	padding: 10px 15px 10px 35px;
 	width: 53%;
 	margin-top: 80px;
+	z-index: 1000;
+	position: relative;
 	background-color: #CBD5FF;
+}
+#artname{
+	font-size: 26px;
+	width: 70%;
 }
 .navbar{
     display: flex;
@@ -141,6 +147,16 @@ button:hover {
   background-color: #080809;
   padding-top: 40px;
   margin: 0px 0 0 0;
+}
+.zyzzcontainer{
+	display: flex;
+	z-index: 1000;
+	justify-content: right;
+}
+.artimg{
+	padding-top: 100px;
+	margin: 0px 50px -100px 0;
+	width: 230px;
 }
 
 img.avatar {
