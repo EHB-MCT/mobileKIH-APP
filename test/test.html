@@ -71,7 +71,6 @@
         function readFile(event) {
             test = event
             const formData = new FormData(document.getElementById('nico'));
-            formData.append("file a", test, "yasminalahmara");
             $.ajax({
                 type: 'POST',
                 url: 'http://localhost:3001/addArt',
