@@ -3,8 +3,9 @@
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0 4px;
-    width: 80%;
+    width: 100%;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -18,6 +19,38 @@
     vertical-align: middle;
     width: 100%;
 }
+
+
+.filter {
+    margin: 0 5% 0 5%;
+}
+
+.filter__section__title {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.bx-arrow-back {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.bx-chevron-left {
+    font-size: 25px;
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: 0.2s;
+}
+
+.bx-chevron-left--on {
+    transform: rotate(-180deg);
+    transition: 0.2s;
+}
+
+
+
 
 #filterButton {
     padding: 10px 20px;
@@ -33,7 +66,6 @@
 
 .filterSlideDiv {
     position: fixed;
-    /*     turn top to 0 */
     top: 0;
     z-index: 1;
     width: 100%;
@@ -49,10 +81,13 @@
 }
 
 .filter__section__filters {
+    display: none;
+}
+
+.filter__section__filters--selected {
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .filter__section__filters p {
     display: flex;
