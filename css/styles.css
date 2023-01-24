@@ -42,7 +42,7 @@
     width: 100%;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10000;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -113,93 +113,115 @@
     background-color: #00bd83;
     padding: 5px;
     display: none;
-  }
+}
+/**********************************LOGIN FORM**********************************************/
+.formlogin{
+	font-family: 'Maison', sans-serif;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  font-size: 15px;
+  opacity: 80%;
+  padding: 12px 0px;
+  margin: 22px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.fieldfont{
+	width: 100%;
+	border: 0;	
+	border-bottom: 1px solid;
+	outline: 0;
+	background: transparent;
+}
+.textfieldform{
+	padding: 24px 15px 0px 15px;
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+}
+button {
+  background-color: #00bd83;
+  color: #080809;
+  padding: 15px 15px;
+  margin: 25px 0 10px 0;
+  border: none;
+  font-size: 19px;
+  cursor: pointer;
+  width: 37%;
+}
+.buttonform{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+button:hover {
+  opacity: 0.8;
+}
+.imgcontainer {
+  text-align: center;
+  background-color: #080809;
+  padding-top: 40px;
+  margin: 0px 0 0 0;
+}
+.zyzzcontainer{
+	display: flex;
+	z-index: 1000;
+	justify-content: right;
+}
+.artimg{
+	padding-top: 100px;
+	margin: 0px 30px -100px 0;
+	width: 300px;
+}
 
-  /**********************************LOGIN FORM**********************************************/
-  .formlogin {
-    font-family: 'Maison', sans-serif;
-  }
+img.avatar {
+  width: 90%;
+  background-color: #080809;
+}
 
-  input[type=text],
-  input[type=password] {
-    width: 100%;
-    font-size: 15px;
-    opacity: 80%;
-    padding: 12px 0px;
-    margin: 22px 0;
-    display: inline-block;
-    box-sizing: border-box;
-  }
+.bottomform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span.psw {
+	background: #f3f0ec;
+  float: left;
+  padding-top: 16px;
+  margin-bottom: 15px;
+}
+.fdpforgot{
+	color: #00bd83;
+}
+/**********************************LOGIN FORM**********************************************/
 
-  .fieldfont {
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid;
-    outline: 0;
-    background: transparent;
-  }
 
-  .textfieldform {
-    padding: 24px 15px 0px 15px;
-    position: relative;
-    margin-top: 10px;
-    width: 100%;
-  }
+/**********************************ARTWORKPAGE**********************************************/
+.artistbuttonwrapper{
+	padding-left: 0px;
+}
+.artistbutton{
+	padding: 4px;
+	width: 30%;
+	font-size: 15px;
+	margin: 0;
+}
+.arttextwrapper{
+	padding: 30px;
+}
+.arttext{
+	font-family: 'Maison';
+	font-size: 18px;
+}
 
-  .button {
-    background-color: #00bd83;
-    color: #080809;
-    padding: 15px 15px;
-    margin: 25px 0 10px 0;
-    border: none;
-    font-size: 19px;
-    cursor: pointer;
-  }
 
-  .buttonform {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/**********************************ARTWORKPAGE**********************************************/
 
-  button:hover {
-    opacity: 0.8;
-  }
-
-  .imgcontainer {
-    text-align: center;
-    background-color: #080809;
-    padding-top: 40px;
-    margin: 0px 0 0 0;
-  }
-
-  img.avatar {
-    width: 90%;
-    background-color: #080809;
-  }
-
-  .bottomform {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  span.psw {
-    background: #f3f0ec;
-    float: left;
-    padding-top: 16px;
-    margin-bottom: 15px;
-  }
-
-  .fdpforgot {
-    color: #00bd83;
-  }
-
-  /**********************************LOGIN FORM**********************************************/
-  @media(max-width: 1280px) {
-    header {
-      padding: 0px 0%;
-      transition: 0.2s;
+@media(max-width: 1280px){
+    header{
+        padding: 0px 0%;
+        transition: 0.2s;
     }
 
     .navbar a {
