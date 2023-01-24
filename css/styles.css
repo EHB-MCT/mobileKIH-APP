@@ -1,89 +1,111 @@
   /* TITLE FONT */
-@font-face {
+  @font-face {
     font-family: 'Clearface';
     src: url('/fonts/Clearface.ttf');
     src: local('Clearface'),
-         url('/fonts/Clearface.ttf'),
-         format('truetype');
+      url('/fonts/Clearface.ttf'),
+      format('truetype');
   }
+
   /* TEXT FONT */
   @font-face {
     font-family: 'Maison';
     src: url('/fonts/Maison-Neue-Book.ttf');
     src: local('Maison'),
-         url('/fonts/Maison-Neue-Book.ttf'),
-         format('truetype');
+      url('/fonts/Maison-Neue-Book.ttf'),
+      format('truetype');
   }
-/****************************************************************************/
 
-*{
+  /****************************************************************************/
+
+  * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
-}
+  }
 
-body{
+
+  body {
     min-height: 100vh;
     background: #f3f0ec;
     color: #000000;
-}
-header{
+  }
+
+  .wrapper {
+    margin: 0 5% 0 5%;
+  }
+
+  header {
     position: fixed;
     width: 100%;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10000;
     align-items: center;
     display: flex;
     justify-content: space-between;
     background: transparent;
     padding: 28px 12%;
     transition: all .5s ease;
-}
-h1{
-	font-size: 30px;
-	font-weight: 100;
-	padding: 15px 15px 10px 45px;
-	width: 50%;
-	margin-top: 50px;
-	background-color: #CBD5FF;
-}
-h2{
-	font-size: 25px;
-	font-family: 'Clearface';
-	font-weight: 100;
-	padding: 10px 15px 10px 35px;
-	width: 53%;
-	margin-top: 80px;
-	background-color: #CBD5FF;
-}
-.navbar{
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 100;
+    padding: 15px 15px 10px 5%;
+    width: 50%;
+    margin-top: 50px;
+    background-color: #CBD5FF;
+  }
+
+  h2 {
+    font-size: 25px;
+    font-family: 'Clearface';
+    font-weight: 100;
+    padding: 10px 15px 10px 35px;
+    width: 53%;
+    margin-top: 80px;
+    background-color: #CBD5FF;
+  }
+
+  h3,
+  p,
+  button {
+    font-family: 'Maison';
+  }
+
+  .navbar {
     display: flex;
-}
-.navbar a{
+  }
+
+  .navbar a {
     color: #ffffff;
     font-size: 30px;
     margin: 0px 30px;
     padding: 5px 0px;
     transition: all 0.5s ease;
-}
-.navbar a:hover{
+  }
+
+  .navbar a:hover {
     color: #00bd83;
-}
-.main{
+  }
+
+  .main {
     display: flex;
     align-items: center;
-}
-.main a{
+  }
+
+  .main a {
     margin-right: 25px;
     margin-left: 10px;
     color: #000000;
     font-size: 30px;
     transition: all 0.5s ease;
-}
-#menu-icon{
+  }
+
+  #menu-icon {
     font-size: 40px;
     color: #000000;
     cursor: pointer;
@@ -142,6 +164,16 @@ button:hover {
   padding-top: 40px;
   margin: 0px 0 0 0;
 }
+.zyzzcontainer{
+	display: flex;
+	z-index: 1000;
+	justify-content: right;
+}
+.artimg{
+	padding-top: 100px;
+	margin: 0px 30px -100px 0;
+	width: 300px;
+}
 
 img.avatar {
   width: 90%;
@@ -163,84 +195,114 @@ span.psw {
 	color: #00bd83;
 }
 /**********************************LOGIN FORM**********************************************/
+
+
+/**********************************ARTWORKPAGE**********************************************/
+.artistbuttonwrapper{
+	padding-left: 0px;
+}
+.artistbutton{
+	padding: 4px;
+	width: 30%;
+	font-size: 15px;
+	margin: 0;
+}
+.arttextwrapper{
+	padding: 30px;
+}
+.arttext{
+	font-family: 'Maison';
+	font-size: 18px;
+}
+
+
+/**********************************ARTWORKPAGE**********************************************/
+
 @media(max-width: 1280px){
     header{
         padding: 0px 0%;
         transition: 0.2s;
     }
-    .navbar a{
-        padding: 5px 0;
-        margin: 0px 20px;
+
+    .navbar a {
+      padding: 5px 0;
+      margin: 0px 20px;
     }
-}
-@media(max-width: 1090px){
-    #menu-icon{
-        display: block;
-        
+  }
+
+  @media(max-width: 1090px) {
+    #menu-icon {
+      display: block;
+
     }
-    .navbar{
-        position: absolute;
-        top: -1000%;
-        width: 50px;
-        left: 0%;
-        height: 400px;
-        background-color: #080809;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        transition: all 0.5s ease;
-        padding-top: 50px;
+
+    .navbar {
+      position: absolute;
+      top: -1000%;
+      width: 50px;
+      left: 0%;
+      height: 400px;
+      background-color: #080809;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: all 0.5s ease;
+      padding-top: 50px;
 
 
     }
-    .navbar a{
-        display: block;
-        margin: 15px 0px ;
-        padding: 0px 10px;
-        transition: all 0.1s;
-    }
-    .navbar a:hover{
-        color: #00bd83;
-    }
-    .navbar.open{
-        top: 0%;
-    }
-}
 
-.swiper {
-	width: 100%;
-	height: 120px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+    .navbar a {
+      display: block;
+      margin: 15px 0px;
+      padding: 0px 10px;
+      transition: all 0.1s;
+    }
+
+    .navbar a:hover {
+      color: #00bd83;
+    }
+
+    .navbar.open {
+      top: 0%;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	width: 100%;
-	height: 120px;
-	/* Center slide text vertically */
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 100%;
+    height: 120px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
   }
 
-  .swiper > .swiper-wrapper {
-	transition-timing-function: linear;
+  .swiper>.swiper-wrapper {
+    transition-timing-function: linear;
   }
+
   .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h2>Text input fields</h2>
+    <img id="test">
+    <script defer>
+
+        fetch('http://localhost:3001/getFile/5').then(e=> e.json()).then(e=>{
+            console.log(e);
+ var b64encoded = btoa(String.fromCharCode.apply(null, e.file.data));
+ var datajpg = "data:image/jpg;base64," + b64encoded;
+ document.getElementById("test").src = datajpg;
+        })
+
+    </script>
+</body>
+
+</html>
