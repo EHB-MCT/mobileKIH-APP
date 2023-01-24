@@ -54,41 +54,27 @@
             <option value="6">Map</option>
         </select><br>
 
-        <label for="fname">Name art:</label><br>
+        <label for="fname">Name File:</label><br>
         <input type="text" id="namefile" name="namefile" value=""><br>
-
-        <label for="fname">ext:</label><br>
-        <input type="text" id="ext" name="ext" value=""><br>
-        <input id="file" name="file" type="file" />
-        <br>
-
-        <input type="submit" value="tet">
+        <input type="submit" value="olé">
     </form>
     <script>
 
-        var input = document.getElementById('file');
-        let test = null
-        function readFile(event) {
-            test = event
+        document.getElementById('nico').addEventListener('submit', e => {
+            e.preventDefault();
             const formData = new FormData(document.getElementById('nico'));
             $.ajax({
                 type: 'POST',
                 url: 'http://localhost:3001/addArt',
-                data: formData,
-                processData: false,
-                contentType: false
+                data: $('#nico').serialize(),
             }).done(function (data) {
                 console.log(data);
+                document.getElementById('nico').reset();
             });
-        }
+        })
 
-        function changeFile() {
-            var file = input.files[0];
-            var reader = new FileReader();
-            readFile(file)
-        }
 
-        input.addEventListener('change', changeFile);
+
     </script>
 </body>
 
