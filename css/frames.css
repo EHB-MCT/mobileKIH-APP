@@ -7,6 +7,7 @@
 
 .room__frames {
     display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -19,7 +20,18 @@
     justify-content: flex-end;
     font-size: 25px;
     cursor: pointer;
+    transition: 0.2s;
+    transform: rotate(0deg);
 }
+
+.bx-plus {}
+
+.plus--active {
+    transform: rotate(45deg) !important;
+    transition: 0.2s;
+}
+
+
 
 .rooms {
     margin-top: 30px;
@@ -35,9 +47,8 @@
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    width: 30%;
     padding: 20px;
-    margin-right: 15px;
+    margin: 15px 15px;
     background-color: white;
     filter: drop-shadow(0 0.15rem 0.12rem rgb(176, 176, 176));
 }
@@ -57,4 +68,77 @@
     font-size: 20px !important;
     top: -20px;
     left: -50%;
+}
+
+
+/* ADD NEW FRAME DIV */
+
+.addRoom-wrapper {
+    background-color: #f3f0ec;
+    position: fixed;
+    width: 86%;
+    top: 100%;
+    transition: 0.2s;
+}
+
+.addRoom-wrapper--active {
+    top: 20%;
+    transition: 0.2s;
+}
+
+.choice {
+    background-color: #E9E5DC;
+    padding-top: 1px;
+    height: 200px;
+}
+
+.choice__existingRooms {
+    height: 200px;
+    overflow: scroll;
+}
+
+
+.choice__existingRooms__room {
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+.choice__existingRooms__room {
+    padding: 14px;
+}
+
+.choice__exstingRooms__room:hover {
+    background-color: aqua;
+}
+
+.choice__existingRooms input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.choice__existingRooms__room--selected {
+    background-color: #CBD5FF !important;
+}
+
+.addNewRoom {
+    cursor: pointer;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #E9E5DC;
+    filter: drop-shadow(0 -0.05rem 0.2rem rgb(176, 176, 176));
+}
+
+.addNewRoom p {
+    margin-left: 5px;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #58ba83;
 }

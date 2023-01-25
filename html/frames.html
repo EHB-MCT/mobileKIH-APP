@@ -24,10 +24,22 @@
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header> -->
+    <header>
+        <ul class="navbar">
+            <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
+            <li><a href="#"><i class="ri-search-2-line"></i></a></li>
+            <li><a href="#"><i class="ri-tv-line"></i></a></li>
+            <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+            <li><a href="#"><i class="ri-account-circle-fill"></i></a></li>
+        </ul>
+        <div class="main">
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
     <h1>My frames</h1>
     <div class="wrapper">
         <div class="plus">
-            <i class='bx bx-plus'></i>
+            <i class='bx bx-plus' id="plus_addroom"></i>
         </div>
         <div class="rooms">
             <div class="room">
@@ -57,7 +69,68 @@
                 </div>
             </div>
         </div>
+
+
+        <!------------------------   ADD ROOM SLIDE UP DIV ------------------>
+        <div class="addRoom-wrapper" id="addRoom-wrapper">
+            <h1>Add room</h1>
+            <input class="fieldfont" type="text" placeholder="Name" name="uname" required>
+            <div class="choice">
+                <div class="choice__existingRooms">
+                    <!-- existing room names come here -->
+                    <div class="choice__existingRooms__room">
+                        <p id="roomID_1">Living room</p>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <p id="roomID_2">Gym</p>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <p id="roomID_3">Master bedroom</p>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <p id="roomID_4">Bathroom</p>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <p id="roomID_5">Bathroom</p>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <p id="roomID_6">Bathroom</p>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <p id="roomID_7">Bathroom</p>
+                    </div>
+                    <!--       <div class="choice__existingRooms__room">
+                        <input type="radio" id="size_2" value="small" />
+                        <label for="size_2">Living room</label>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <input type="radio" id="size_3" value="small" />
+                        <label for="size_3">Living room</label>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <input type="radio" id="size_4" value="small" />
+                        <label for="size_4">Living room</label>
+                    </div>
+                    <div class="choice__existingRooms__room">
+                        <input type="radio" id="size_5" value="small" />
+                        <label for="size_5">Living room</label>
+                    </div> -->
+
+
+                </div>
+                <div class="addNewRoom">
+                    <i class='bx bx-plus'></i>
+                    <p>Add new room</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+
+
+
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="../js/frames.js"></script>
 </body>

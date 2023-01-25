@@ -72,7 +72,9 @@
 
   h3,
   p,
-  button {
+  button,
+  input,
+  label {
     font-family: 'Maison';
   }
 
