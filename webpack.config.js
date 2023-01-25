@@ -5,7 +5,9 @@ module.exports = {
 
     index: './src/index.js',
 
-    loginRegister: './src/loginRegister.js'
+    loginRegister: './src/loginRegister.js',
+
+	routine: './src/routine.js'
 
   },
   output: {
