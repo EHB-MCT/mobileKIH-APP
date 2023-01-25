@@ -155,6 +155,28 @@
 
   }
 
+  /***************************GALLERY*****************/
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 4px;
+    width: 100%;
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .column {
+    max-width: 50%;
+    padding: 0 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+
   /**********************************LOGIN FORM**********************************************/
   .formlogin {
     font-family: 'Maison', sans-serif;

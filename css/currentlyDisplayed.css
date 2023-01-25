@@ -1,0 +1,38 @@
+@import url('./styles.css');
+
+#arrowBackToFrames {
+    margin-top: 30px;
+}
+
+.displayed-art {
+    display: flex;
+    flex-direction: column;
+}
+
+.displayed-art :last-child {
+    margin-top: 20px;
+    align-self: center;
+}
+
+#displayed-art-img {
+    width: 85%;
+    margin-top: 40px;
+    margin-left: 7.5%;
+}
+
+#kader {
+    width: 86%;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.displayed-art-kader {
+    position: absolute;
+    width: 90%;
+    left: -3px;
+
+}
+
+.rented-art {
+    margin-top: 50px;
+}
