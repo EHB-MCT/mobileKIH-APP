@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<title>KIH</title>
 </head>
 
@@ -24,29 +24,33 @@
 			<div class="bx bx-menu" id="menu-icon"></div>
 		</div>
 	</header>
-	<form class="formlogin">
-		<div class="imgcontainer">
-			<img src="/images/KIHLOGOHOR.png" alt="Avatar" class="avatar">
-		</div>
-		<div>
-			<h1>SIGN UP</h1>
-		</div>
-		<div class="textfieldform">
-			<input class="fieldfont" type="text" placeholder="Name" name="uname" id="signup_firstname" required>
-			<input class="fieldfont" type="text" placeholder="Last Name" name="uname" id="signup_lastname" required>
-			<input class="fieldfont" type="text" placeholder="Email" name="uname" id="signup_email" required>
-			<input class="fieldfont" type="password" placeholder="Password" name="psw" id="signup_password" required>
-			<input class="fieldfont" type="password" placeholder="Confirm Password" id="signup_repeatpassword"
-				name="psw" required>
-			<div class="buttonform">
-				<button class="button" type="submit" id="signup_button">SIGN UP</button>
-			</div>
-		</div>
+	<div class="imgcontainer">
+		<img src="/images/KIHLOGOHOR.png" alt="Avatar" class="avatar">
+	</div>
+	<div>
+		<h1>SIGN UP</h1>
+	</div>
+	<div class="wrapper">
+		<form class="formlogin">
 
-		<div class="bottomform" style="background-color:#f1f1f1">
-			<span class="psw">Already got an account? <a class="fdpforgot" href="login.html">Log in</a></span>
-		</div>
-	</form>
+			<div class="textfieldform">
+				<input class="fieldfont" type="text" placeholder="Name" name="uname" id="signup_firstname" required>
+				<input class="fieldfont" type="text" placeholder="Last Name" name="uname" id="signup_lastname" required>
+				<input class="fieldfont" type="text" placeholder="Email" name="uname" id="signup_email" required>
+				<input class="fieldfont" type="password" placeholder="Password" name="psw" id="signup_password"
+					required>
+				<input class="fieldfont" type="password" placeholder="Confirm Password" id="signup_repeatpassword"
+					name="psw" required>
+				<div class="buttonform">
+					<button class="button" type="submit" id="signup_button">SIGN UP</button>
+				</div>
+			</div>
+
+			<div class="bottomform" style="background-color:#f1f1f1">
+				<span class="psw">Already got an account? <a class="fdpforgot" href="login.html">Log in</a></span>
+			</div>
+		</form>
+	</div>
 	<script type="text/javascript" src="/js/script.js"></script>
 	<script src="../dist/loginRegister.js"></script>
 </body>

@@ -53,8 +53,9 @@
 
   h1 {
     font-size: 30px;
+    font-family: 'Clearface';
     font-weight: 100;
-    padding: 15px 15px 10px 5%;
+    padding: 15px 15px 10px 7%;
     width: 50%;
     margin-top: 50px;
     background-color: #CBD5FF;
@@ -64,7 +65,7 @@
     font-size: 25px;
     font-family: 'Clearface';
     font-weight: 100;
-    padding: 10px 15px 10px 5%;
+    padding: 10px 15px 10px 7%;
     width: 53%;
     margin-top: 50px;
     background-color: #CBD5FF;
@@ -202,7 +203,6 @@
   }
 
   .textfieldform {
-    padding: 24px 15px 0px 15px;
     position: relative;
     margin-top: 10px;
     width: 100%;
