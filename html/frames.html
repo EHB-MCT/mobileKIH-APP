@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <!--     <header>
+
+    <!-- <header>
         <ul class="navbar">
             <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
             <li><a href="#"><i class="ri-search-2-line"></i></a></li>
@@ -23,7 +24,7 @@
         <div class="main">
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
-    </header> -->
+        </header> -->
     <header>
         <ul class="navbar">
             <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
@@ -73,7 +74,7 @@
 
         <!------------------------   ADD ROOM SLIDE UP DIV ------------------>
         <div class="addRoom-wrapper" id="addRoom-wrapper">
-            <h1>Add room</h1>
+            <h1>Add frame</h1>
             <input class="fieldfont" type="text" placeholder="Name" name="uname" required>
             <div class="choice">
                 <div class="choice__existingRooms">
@@ -118,20 +119,28 @@
 
 
                 </div>
-                <div class="addNewRoom">
-                    <i class='bx bx-plus'></i>
-                    <p>Add new room</p>
+                <div>
+                    <div class="addNewRoom" id="addNewRoom">
+                        <i class='bx bx-plus'></i>
+                        <p>Add new room</p>
+                    </div>
+                    <div class="addNewRoom-wrapper">
+                        <div id="addNewRoom-wrapper">
+                            <div class="addNewRoom_input" id="addNewRoom_input_">
+                                <input type="text" placeholder="Name" class="fieldfont">
+                                <button class="button">add room</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="endframeAdd">
+                <button class="button endframeAdd-button">ADD FRAME</button>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-    <script type="text/javascript" src="js/script.js"></script>
+    <div id="overlay"></div>
+    <script type="text/javascript" src="../js/script.js"></script>
     <script type="text/javascript" src="../js/frames.js"></script>
 </body>
 

@@ -18,7 +18,6 @@ toggleArrows.forEach(button => {
 });
 
 //add room
-
 let PREVIOUSLY_CHOSEN = '';
 let CHOSEN_ROOM;
 
@@ -39,6 +38,12 @@ document.querySelectorAll('.choice__existingRooms').forEach(room => {
 
 // add new room
 document.getElementById('plus_addroom').addEventListener('click', () => {
-    document.getElementById('plus_addroom').classList.toggle('plus--active')
+    document.getElementById('plus_addroom').classList.toggle('plus--active');
     document.getElementById('addRoom-wrapper').classList.toggle('addRoom-wrapper--active');
+});
+
+document.getElementById('addNewRoom').addEventListener('click', () => {
+    console.log('clicked');
+    document.getElementById('overlay').style.display = "block";
+    document.getElementById("addNewRoom_input_").classList.toggle('addNewRoom_input--on');
 })
