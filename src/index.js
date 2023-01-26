@@ -4,17 +4,16 @@ import _ from 'lodash';
  // import styles bundle
  import 'swiper/css/bundle';
  var swiperOptions1 = {
-	loop: true,
-	autoplay: {
-		delay: 1,
-		 },
-	reverseDirection: true,
-	grabCursor: true,
-	a11y: false,
-	freeMode: true,
-	speed: 11000,
-	loop: true,	
-	slidesPerView: "auto",
+        loop: true,
+        autoplay: {
+          delay: 1,
+          disableOnInteraction: false
+        },
+        slidesPerView: "auto",
+        speed: 1000,
+        grabCursor: true,
+        mousewheelControl: true,
+        keyboardControl: true
   };
 
   var swiperOptions2 = {
