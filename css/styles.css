@@ -102,6 +102,12 @@
     color: #00bd83;
   }
 
+  /*  WHEN ON A CERTAIN PAGE, that gets green color in nav */
+
+  .nav-selected {
+    color: #00bd83;
+  }
+
   .main {
     display: flex;
     align-items: center;
