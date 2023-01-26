@@ -36,3 +36,45 @@
 .rented-art {
     margin-top: 50px;
 }
+
+.slidecontainer {
+    margin-top: 50px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 85%;
+    height: 10px;
+    background: #E9E5DC;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+/* .slider:hover {
+    opacity: 1;
+} */
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #58ba83;
+    cursor: pointer;
+}
+
+/* .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: white;
+    cursor: pointer;
+} */
+
+.slidecontainer__slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}

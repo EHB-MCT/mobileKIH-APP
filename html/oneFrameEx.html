@@ -15,10 +15,10 @@
     <header>
         <ul class="navbar">
             <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
-            <li><a href="#"><i class="ri-search-2-line"></i></a></li>
-            <li><a href="#"><i class="ri-tv-line"></i></a></li>
+            <li><a href="./gallery.html"><i class="ri-search-2-line"></i></a></li>
+            <li><a href="./frames.html"><i class="ri-tv-line"></i></a></li>
             <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-            <li><a href="#"><i class="ri-account-circle-fill"></i></a></li>
+            <li><a href="./profile.html"><i class="ri-account-circle-fill"></i></a></li>
         </ul>
         <div class="main">
             <div class="bx bx-menu" id="menu-icon"></div>
@@ -37,7 +37,13 @@
                 </div>
                 <p>art name</p>
             </div>
-
+            <div class="slidecontainer">
+                <p>Set art duration (hours)</p>
+                <div class="slidecontainer__slider">
+                    <input type="range" min="0" max="24" value="50" class="slider" id="range">
+                    <p id="settime">24</p>
+                </div>
+            </div>
             <div class="rented-art">
                 <h3>Currently rented</h3>
                 <div class="row">
@@ -60,4 +66,5 @@
 
 
     <script src="../js/script.js" defer></script>
+    <script src="../js/diplayFrame.js" defer></script>
 </body>

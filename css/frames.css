@@ -1,5 +1,9 @@
 @import url('../css/styles.css');
 
+.room {
+    margin-bottom: 20px;
+}
+
 .room__title {
     display: flex;
     justify-content: space-between;
@@ -47,7 +51,7 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px;
     margin: 15px 15px;
     width: 40%;
     background-color: white;
@@ -66,20 +70,25 @@
 
 .settings {
     position: relative;
-    font-size: 30px !important;
-    top: -20px;
+    font-size: 25px !important;
+    top: -15px;
     left: -50%;
 }
 
 
 /* ADD NEW FRAME DIV */
+.endframeAdd {
+    background-color: #f3f0ec;
+}
 
 .addRoom-wrapper {
     background-color: #f3f0ec;
     position: fixed;
     width: 86%;
     top: 100%;
+    height: 100%;
     transition: 0.2s;
+    z-index: 10;
 }
 
 .addRoom-wrapper--active {
@@ -90,7 +99,41 @@
 .choice {
     background-color: #E9E5DC;
     padding-top: 1px;
-    height: 200px;
+}
+
+.choice select {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    padding-right: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.choice select :checked {
+    border: none;
+}
+
+.choice option {
+    font-size: 20px;
+    font-family: 'Maison';
+}
+
+option:checked {
+    background-color: #58ba83;
+}
+
+/* .choice select:hover {
+    background-color: #CBD5FF;
+} */
+
+.choice option {
+    background-color: #E9E5DC;
+    border-radius: 0;
+}
+
+.choice option:hover {
+    background-color: black;
 }
 
 .choice__existingRooms {
@@ -136,6 +179,8 @@
     filter: drop-shadow(0 -0.05rem 0.2rem rgb(176, 176, 176));
 }
 
+
+
 .addNewRoom p {
     margin-left: 5px;
 }
@@ -144,9 +189,8 @@ input[type="radio"]:checked+label {
     background-color: #58ba83;
 }
 
-.addNewRoom-wrapper {
+#addNewRoom-wrapper {
     display: none;
-
 }
 
 #addNewRoom_input {
@@ -154,7 +198,6 @@ input[type="radio"]:checked+label {
     justify-content: space-between;
     background-color: #f3f0ec;
     width: 100%;
-    position: absolute;
     z-index: -1;
     top: -90px;
     background-color: #E9E5DC;
@@ -167,6 +210,7 @@ input[type="radio"]:checked+label {
 
 .addNewRoom_input input {
     width: 50%;
+    margin-right: 10px;
 }
 
 .addNewRoom_input--on {

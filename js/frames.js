@@ -18,7 +18,7 @@ toggleArrows.forEach(button => {
 });
 
 //add room
-let PREVIOUSLY_CHOSEN = '';
+/* let PREVIOUSLY_CHOSEN = '';
 let CHOSEN_ROOM;
 
 document.querySelectorAll('.choice__existingRooms').forEach(room => {
@@ -33,17 +33,45 @@ document.querySelectorAll('.choice__existingRooms').forEach(room => {
         console.log(CHOSEN_ROOM);
 
     });
-});
-
-
+}); */
+document.getElementById('existing_rooms').addEventListener('change', (e) => {
+    let selectedRoom = e.target.value;
+    console.log(e.target.value);
+    if (selectedRoom == 'newRoom') {
+        console.log('new room add')
+        document.getElementById('addNewRoom-wrapper').style.display = "block";
+    } else {
+        document.getElementById('addNewRoom-wrapper').style.display = "none";
+    }
+})
 // add new room
 document.getElementById('plus_addroom').addEventListener('click', () => {
     document.getElementById('plus_addroom').classList.toggle('plus--active');
     document.getElementById('addRoom-wrapper').classList.toggle('addRoom-wrapper--active');
 });
 
-document.getElementById('addNewRoom').addEventListener('click', () => {
+//ADD FRAME
+
+/* document.getElementById('addNewRoom').addEventListener('click', () => {
+    let newFrameName = document.getElementById('newRoom_input').value;
+    let roomId = document.getElementById("existing_rooms").value;
+
+
+
+
+})
+ */
+/* function addFrame(roomID, frameName, frameID) {
+    document.getElementById(`${roomID}`).innerHTML += `<div class="frame" id="${frameID}">
+    <i class='bx bxs-cog settings'></i>
+    <p>${frameName}</p>
+    <i class='bx bxs-toggle-left'></i>
+</div>`;
+}
+ */
+
+/* document.getElementById('addNewRoom').addEventListener('click', () => {
     console.log('clicked');
     document.getElementById('overlay').style.display = "block";
     document.getElementById("addNewRoom_input_").classList.toggle('addNewRoom_input--on');
-})
+}) */

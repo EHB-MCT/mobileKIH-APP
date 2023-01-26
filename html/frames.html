@@ -27,11 +27,11 @@
         </header> -->
     <header>
         <ul class="navbar">
-            <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
+            <li><a href="./home.html"><img src="/images/KIHLOGOW.png"></a></li>
             <li><a href="#"><i class="ri-search-2-line"></i></a></li>
-            <li><a href="#"><i class="ri-tv-line"></i></a></li>
+            <li><a href="./frames.html"><i class="ri-tv-line nav-selected"></i></a></li>
             <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-            <li><a href="#"><i class="ri-account-circle-fill"></i></a></li>
+            <li><a href="./profile.html"><i class="ri-account-circle-fill"></i></a></li>
         </ul>
         <div class="main">
             <div class="bx bx-menu" id="menu-icon"></div>
@@ -42,7 +42,7 @@
         <div class="plus">
             <i class='bx bx-plus' id="plus_addroom"></i>
         </div>
-        <div class="rooms">
+        <div class="rooms" id="rooms">
             <div class="room">
 
                 <div class="room__title" id="addRoomFrame_button">
@@ -50,7 +50,33 @@
                     <div class="toggle">
                         <i class='bx bx-chevron-left'></i> </div>
                 </div>
-                <div class="room__frames" id="type">
+                <div class="room__frames" id="room_id-1">
+                    <div class="frame">
+                        <i class='bx bxs-cog settings'></i>
+                        <p>Big screen</p>
+                        <i class='bx bxs-toggle-left'></i>
+                    </div>
+                    <div class="frame">
+                        <i class='bx bxs-cog settings'></i>
+                        <p>Tero Bau</p>
+                        <i class='bx bxs-toggle-left'></i>
+                    </div>
+
+                    <div class="frame">
+                        <i class='bx bxs-cog settings'></i>
+                        <p>Big screen</p>
+                        <i class='bx bxs-toggle-left'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="room" id="room_id-2">
+
+                <div class="room__title" id="addRoomFrame_button">
+                    <h3>Bathroom</h3>
+                    <div class="toggle">
+                        <i class='bx bx-chevron-left'></i> </div>
+                </div>
+                <div class="room__frames" id="room_id-1">
                     <div class="frame">
                         <i class='bx bxs-cog settings'></i>
                         <p>Big screen</p>
@@ -74,11 +100,32 @@
 
         <!------------------------   ADD ROOM SLIDE UP DIV ------------------>
         <div class="addRoom-wrapper" id="addRoom-wrapper">
-            <h1>Add frame</h1>
+            <h3>Add frame</h3>
             <input class="fieldfont" type="text" placeholder="Name" name="uname" required>
             <div class="choice">
-                <div class="choice__existingRooms">
-                    <!-- existing room names come here -->
+                <select name="rooms" id="existing_rooms">
+                    <option value="select">Select room</option>
+                    <option value="living room" id="room_id_1">Living room</option>
+                    <option value="Bathroom" id="room_id_2">Bathroom</option>
+                    <option value="Gym" id="room_id_3">Gym</option>
+                    <option value="Kitchen" id="room_id_4">Kitchen</option>
+                    <option value="Kitchen" id="room_id_5">Kitchen</option>
+                    <option value="Kitchen" id="room_id_6">Kitchen</option>
+                    <option value="Kitchen" id="room_id_7">Kitchen</option>
+                    <option value="newRoom" id="room_id_8">
+                        <div>
+                            <i class='bx bx-plus'></i>
+                            <div class="addNewRoom" id="addNewRoom">
+
+                                <p>Add new room</p>
+                            </div>
+
+                        </div>
+                    </option>
+
+                </select>
+                <!--         <div class="choice__existingRooms">
+                  
                     <div class="choice__existingRooms__room">
                         <p id="roomID_1">Living room</p>
                     </div>
@@ -100,42 +147,19 @@
                     <div class="choice__existingRooms__room">
                         <p id="roomID_7">Bathroom</p>
                     </div>
-                    <!--       <div class="choice__existingRooms__room">
-                        <input type="radio" id="size_2" value="small" />
-                        <label for="size_2">Living room</label>
-                    </div>
-                    <div class="choice__existingRooms__room">
-                        <input type="radio" id="size_3" value="small" />
-                        <label for="size_3">Living room</label>
-                    </div>
-                    <div class="choice__existingRooms__room">
-                        <input type="radio" id="size_4" value="small" />
-                        <label for="size_4">Living room</label>
-                    </div>
-                    <div class="choice__existingRooms__room">
-                        <input type="radio" id="size_5" value="small" />
-                        <label for="size_5">Living room</label>
-                    </div> -->
+                </div> -->
 
-
-                </div>
-                <div>
-                    <div class="addNewRoom" id="addNewRoom">
-                        <i class='bx bx-plus'></i>
-                        <p>Add new room</p>
-                    </div>
+                <div id="addNewRoom-wrapper">
                     <div class="addNewRoom-wrapper">
-                        <div id="addNewRoom-wrapper">
-                            <div class="addNewRoom_input" id="addNewRoom_input_">
-                                <input type="text" placeholder="Name" class="fieldfont">
-                                <button class="button">add room</button>
-                            </div>
+                        <div class="addNewRoom_input" id="addNewRoom_input">
+                            <input type="text" placeholder="Name" class="fieldfont" id="newRoom_input">
+                            <button class="button">add room</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="endframeAdd">
-                <button class="button endframeAdd-button">ADD FRAME</button>
+                <button class="button endframeAdd-button" id="endframeAdd-button">ADD FRAME</button>
             </div>
         </div>
     </div>

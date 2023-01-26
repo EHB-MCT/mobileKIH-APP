@@ -75,7 +75,9 @@
   p,
   button,
   input,
-  label {
+  label,
+  select,
+  option {
     font-family: 'Maison';
   }
 
@@ -97,6 +99,12 @@
   }
 
   .navbar a:hover {
+    color: #00bd83;
+  }
+
+  /*  WHEN ON A CERTAIN PAGE, that gets green color in nav */
+
+  .nav-selected {
     color: #00bd83;
   }
 
@@ -133,6 +141,21 @@
     padding: 5px 10px;
   }
 
+
+  #selectedFilters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .selectedFilters__button {
+    display: inline;
+    font-size: 14px;
+    background-color: #E9E5DC;
+  }
+
+  .selectedFilter__filter__cross {
+    cursor: pointer;
+  }
 
   .bx-chevron-left {
     font-size: 25px;
@@ -321,12 +344,16 @@
   }
 
   #rentbutton {
-    padding: 0px;
+    padding: 0;
     width: 37%;
     height: 60PX;
     margin-left: 10px;
     margin: 0;
     font-size: 18PX;
+  }
+
+  #rentbutton p {
+    padding: 0px 10px;
   }
 
   .moreartwrapper {
