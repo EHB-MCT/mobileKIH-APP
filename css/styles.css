@@ -75,7 +75,9 @@
   p,
   button,
   input,
-  label {
+  label,
+  select,
+  option {
     font-family: 'Maison';
   }
 
@@ -336,12 +338,16 @@
   }
 
   #rentbutton {
-    padding: 0px;
+    padding: 0;
     width: 37%;
     height: 60PX;
     margin-left: 10px;
     margin: 0;
     font-size: 18PX;
+  }
+
+  #rentbutton p {
+    padding: 0px 10px;
   }
 
   .moreartwrapper {
