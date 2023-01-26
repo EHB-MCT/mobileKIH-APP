@@ -7,7 +7,10 @@ module.exports = {
 
     loginRegister: './src/loginRegister.js',
 
-	routine: './src/routine.js'
+    routine: './src/routine.js',
+
+    gallery: './src/gallery.js'
+
 
   },
   output: {
@@ -20,6 +23,6 @@ module.exports = {
     rules: [{
       test: /\.css$/i,
       use: ["style-loader", "css-loader"],
-    }, ],
+    },],
   },
 };

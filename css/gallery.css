@@ -98,11 +98,18 @@
     cursor: pointer;
 }
 
-.filter__section__filters--active,
-.filter__section__filters p:hover {
+.filter__section__filters--active {
     background-color: #CBD5FF !important;
 }
 
 .filters__endButton {
     margin: auto;
+}
+
+.column canvas {
+    width: 100%;
+}
+
+.column video {
+    width: 100%;
 }
