@@ -23,6 +23,9 @@ body {
     font-size: 30px;
 }
 
+.user_info p {
+    margin-top: 15px;
+}
 
 .profile_img {
     width: 50%;

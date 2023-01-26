@@ -2,65 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/routine.css">
-    <title>KIH</title>
+	<title>KIH</title>
 </head>
 
 <body>
-  <header>
-    <ul class="navbar">
-      <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
-      <li><a href="#"><i class="ri-search-2-line"></i></a></li>
-      <li><a href="#"><i class="ri-tv-line"></i></a></li>
-      <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-      <li><a href="#"><i class="ri-account-circle-fill"></i></a></li>
-    </ul>
-    <div class="main">
-      <div class="bx bx-menu" id="menu-icon"></div>
-    </div>
-  </header>
-  <main>
-	<div class="titlewrapper">
-		<h1>Routine</h1>
-	  </div>
-	  <div class="roomtitlewrapper">
-		<h4>Bathroom</h4>
-		<i id="slideroutine" class='bx bxs-toggle-left'></i>
-	  </div>
-	  <div class="weekwrapper">
-		<div class="swiper mySwiper">
-			<div class="swiper-wrapper">
-			  <div class="swiper-slide">Monday</div>
-			  <div class="swiper-slide">Tuesday</div>
-			  <div class="swiper-slide">Wednesday</div>
-			  <div class="swiper-slide">Thursday</div>
-			  <div class="swiper-slide">Friday</div>
-			  <div class="swiper-slide">Saturday</div>
-			  <div class="swiper-slide">Sunday</div>
-			</div>
-			<div class="swiper-pagination"></div>
-		  </div>
-	  </div>
-	  <div slider id="slider-distance">
-		<div>
-		  <div inverse-left style="width:70%;"></div>
-		  <div inverse-right style="width:70%;"></div>
-		  <div range style="left:30%;right:40%;"></div>
-		  <span thumb style="left:30%;"></span>
-		  <span thumb style="left:60%;"></span>
-		  <div sign style="left:30%;">
-			<span id="value">30</span>
-		  </div>
-		  <div sign style="left:60%;">
-			<span id="value">60</span>
-		  </div>
+	<header>
+		<ul class="navbar">
+			<li><a href="./home.html"><img src="/images/KIHLOGOW.png"></a></li>
+			<li><a href="./gallery.html"><i class="ri-search-2-line"></i></a></li>
+			<li><a href="./frames.html"><i class="ri-tv-line"></i></a></li>
+			<li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+			<li><a href="./profile.html"><i class="ri-account-circle-fill"></i></a></li>
+		</ul>
+		<div class="main">
+			<div class="bx bx-menu" id="menu-icon"></div>
 		</div>
-		<input type="range" tabindex="0" value="30" max="100" min="0" step="15	" oninput="
+	</header>
+	<main>
+		<div class="titlewrapper">
+			<h1>Routine</h1>
+		</div>
+		<div class="roomtitlewrapper">
+			<h4>Bathroom</h4>
+			<i id="slideroutine" class='bx bxs-toggle-left'></i>
+		</div>
+		<div class="weekwrapper">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">Monday</div>
+					<div class="swiper-slide">Tuesday</div>
+					<div class="swiper-slide">Wednesday</div>
+					<div class="swiper-slide">Thursday</div>
+					<div class="swiper-slide">Friday</div>
+					<div class="swiper-slide">Saturday</div>
+					<div class="swiper-slide">Sunday</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div slider id="slider-distance">
+			<div>
+				<div inverse-left style="width:70%;"></div>
+				<div inverse-right style="width:70%;"></div>
+				<div range style="left:30%;right:40%;"></div>
+				<span thumb style="left:30%;"></span>
+				<span thumb style="left:60%;"></span>
+				<div sign style="left:30%;">
+					<span id="value">30</span>
+				</div>
+				<div sign style="left:60%;">
+					<span id="value">60</span>
+				</div>
+			</div>
+			<input type="range" tabindex="0" value="30" max="100" min="0" step="15	" oninput="
 		this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
 		var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
 		var children = this.parentNode.childNodes[1].childNodes;
@@ -68,8 +68,8 @@
 		children[5].style.left=value+'%';
 		children[7].style.left=value+'%';children[11].style.left=value+'%';
 		children[11].childNodes[1].innerHTML=this.value;" />
-	  
-		<input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+
+			<input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
 		this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
 		var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
 		var children = this.parentNode.childNodes[1].childNodes;
@@ -77,13 +77,13 @@
 		children[5].style.right=(100-value)+'%';
 		children[9].style.left=value+'%';children[13].style.left=value+'%';
 		children[13].childNodes[1].innerHTML=this.value;" />
-	  </div>
-  </main>
+		</div>
+	</main>
 
-  <script type="text/javascript" src="/js/script.js"></script>
-  <script type="text/javascript" src="../dist/routine.js"></script>
-  <script type="text/javascript" src="../js/frames.js"></script>
-  <script type="text/javascript" src="../js/routineslider.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript" src="../dist/routine.js"></script>
+	<script type="text/javascript" src="../js/frames.js"></script>
+	<script type="text/javascript" src="../js/routineslider.js"></script>
 </body>
 
 </html>
