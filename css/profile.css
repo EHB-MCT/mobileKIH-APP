@@ -1,0 +1,18 @@
+@import url('../css/styles.css');
+
+
+.ri-heart-fill {
+    font-size: 30px;
+}
+
+.profile-buttons :nth-child(2) {
+    background-color: transparent;
+    border: 2px solid #00bd83;
+    color: #00bd83;
+}
+
+.profile-buttons button:hover {
+    background-color: #00bd83;
+    color: #080809;
+    opacity: 1;
+}

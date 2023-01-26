@@ -208,7 +208,7 @@
     width: 100%;
   }
 
-  button {
+  .button {
     background-color: #00bd83;
     color: #080809;
     padding: 15px 15px;
@@ -312,21 +312,21 @@
   }
 
   #likebutton {
-    padding: 0;
+    padding: 0px;
     font-size: 40px;
-    width: 25%;
-    height: 45PX;
+    width: 37%;
+    height: 60PX;
     margin: 0;
     margin-right: 10PX;
   }
 
   #rentbutton {
-    padding: 0;
-    width: 25%;
-    height: 45PX;
+    padding: 0px;
+    width: 37%;
+    height: 60PX;
     margin-left: 10px;
     margin: 0;
-    font-size: 22PX;
+    font-size: 18PX;
   }
 
   .moreartwrapper {
