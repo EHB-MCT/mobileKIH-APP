@@ -134,6 +134,21 @@
   }
 
 
+  #selectedFilters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .selectedFilters__button {
+    display: inline;
+    font-size: 14px;
+    background-color: #E9E5DC;
+  }
+
+  .selectedFilter__filter__cross {
+    cursor: pointer;
+  }
+
   .bx-chevron-left {
     font-size: 25px;
     cursor: pointer;
