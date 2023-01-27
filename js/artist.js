@@ -1,9 +1,8 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const idArtist = urlParams.get('id')
-console.log(idArtWork);
 
-fetch('https://dimetrondon-backend.onrender.com/getArtist/' + idArtWork)
+fetch('https://dimetrondon-backend.onrender.com/getArtist/' + idArtist)
     .then(e => e.json())
     .then(data => {
         document.getElementById('artistname').innerText = data[0][0].artistname;
