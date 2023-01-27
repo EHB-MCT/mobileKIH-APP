@@ -1,8 +1,6 @@
 import _ from 'lodash';
 
-import Swiper from 'swiper';
 // import styles bundle
-import 'swiper/css/bundle';
 var swiperOptions1 = {
   loop: true,
   autoplay: {
