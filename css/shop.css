@@ -1,0 +1,93 @@
+@import url('../css/styles.css');
+
+body {
+    background-color: black;
+}
+
+.wrapper {
+    color: white;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+
+}
+
+.steps button,
+span {
+    opacity: 0.5;
+}
+
+.ri-shopping-cart-line {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 7%;
+    top: 55px;
+}
+
+.steps button {
+    background-color: transparent;
+    color: #00bd83;
+    width: 30%;
+    padding: 10px 10px;
+    border: 1.5px solid #00bd83;
+}
+
+.steps span {
+    height: 1.5px;
+    width: 5%;
+    background-color: #00bd83;
+}
+
+.selected-step {
+    opacity: 1 !important;
+}
+
+
+.frame_options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 70px;
+
+}
+
+.frame-options-classic,
+.frame-options-modern {
+    width: 60%;
+    margin-left: 20px;
+}
+
+.frame_options img {
+    width: 100%;
+    border: 1.5px solid transparent;
+}
+
+.frame_options img:hover {
+    border: 1.7px solid #00bd83;
+}
+
+.frame_options p {
+    font-family: 'Clearface';
+    font-size: 24px;
+    /*     position: relative;
+    left: -20px;
+    bottom: 20px; */
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.nextbuttondiv {
+    /*     margin-top: 20%;
+    display: flex;
+    justify-content: center; */
+    position: absolute;
+    width: 100%;
+    left: 31.5%;
+    bottom: 10%;
+}
