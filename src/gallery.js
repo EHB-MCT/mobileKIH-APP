@@ -137,6 +137,7 @@ async function applyThemJuicyFilter() {
                     test.classList.add('test')
                     test.autoplay = true;
                     test.loop = true;
+                    test.muted = true;
                     test.load();
                     test.append(source)
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
@@ -160,6 +161,9 @@ async function applyThemJuicyFilter() {
                     blur.classList.add('blur')
                     test.src = "https://dimetrodon.fr/files/" + e.file;
                     blur.src = "https://dimetrodon.fr/files/" + e.file;
+                    test.addEventListener('click', () => {
+                        window.location.href = './artwork.html?id=' + e.idart;
+                    })
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
 
 

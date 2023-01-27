@@ -133,13 +133,7 @@
 
 
   /* //filters */
-  .selectedFilters__filter {
-    display: flex;
-    align-items: center;
-    background-color: #E9E5DC;
-    margin-left: 10px;
-    padding: 5px 10px;
-  }
+
 
 
   #selectedFilters {
@@ -397,6 +391,7 @@
     height: 350PX;
     width: 230px;
     margin-top: -25px;
+    object-fit: cover;
     padding: 0;
   }
 

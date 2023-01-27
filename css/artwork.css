@@ -1,0 +1,6 @@
+.selectedFilters__filter {
+    background-color: #E9E5DC;
+    margin-left: 10px;
+    padding: 5px 10px;
+    display: inline-block
+}
