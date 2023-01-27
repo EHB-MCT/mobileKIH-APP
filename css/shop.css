@@ -22,7 +22,7 @@ span {
     opacity: 0.5;
 }
 
-.ri-shopping-cart-line {
+#shoppingCart {
     color: white;
     font-size: 30px;
     position: absolute;
@@ -49,6 +49,18 @@ span {
 }
 
 
+.nextbuttondiv {
+    /*     margin-top: 20%;
+    display: flex;
+    justify-content: center; */
+    position: absolute;
+    width: 100%;
+    left: 31.5%;
+    bottom: 5%;
+}
+
+/***************** STEP ONE: FRAME ****************/
+
 .frame_options {
     display: flex;
     justify-content: space-between;
@@ -65,11 +77,11 @@ span {
 
 .frame_options img {
     width: 100%;
-    border: 1.5px solid transparent;
+    border: 2px solid transparent;
 }
 
 .frame_options img:hover {
-    border: 1.7px solid #00bd83;
+    border: 2px solid #00bd83;
 }
 
 .frame_options p {
@@ -82,12 +94,24 @@ span {
     margin-left: -20px;
 }
 
-.nextbuttondiv {
-    /*     margin-top: 20%;
+/***************** STEP TWO: SIZE ****************/
+
+.sizeswrapper {
     display: flex;
-    justify-content: center; */
-    position: absolute;
-    width: 100%;
-    left: 31.5%;
-    bottom: 10%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.sizeswrapper div {
+    margin-bottom: 10px;
+}
+
+.sizeswrapper img {
+    border: 2px solid transparent;
+}
+
+
+.sizeswrapper img:hover {
+    border: 2px solid #00bd83;
 }
