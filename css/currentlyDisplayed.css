@@ -78,3 +78,12 @@
     justify-content: space-between;
     margin-top: 20px;
 }
+
+
+
+.column img,
+video {
+    margin-top: 8px !important;
+    vertical-align: middle;
+    width: 100%;
+}

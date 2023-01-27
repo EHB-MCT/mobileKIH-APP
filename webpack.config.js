@@ -9,7 +9,13 @@ module.exports = {
 
     routine: './src/routine.js',
 
-    gallery: './src/gallery.js'
+    gallery: './src/gallery.js',
+
+    frames: './src/frames.js',
+
+    diplayFrame: './src/diplayFrame.js',
+
+
 
 
   },

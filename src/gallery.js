@@ -141,6 +141,9 @@ async function applyThemJuicyFilter() {
                     test.load();
                     test.append(source)
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
+                    test.addEventListener('click', () => {
+                        window.location.href = './artwork.html?id=' + e.idart;
+                    })
 
                 } else if (e.idgenre == 1) {
                     let test = document.createElement('img');
@@ -149,7 +152,9 @@ async function applyThemJuicyFilter() {
                     blur.classList.add('blur')
                     test.src = "https://dimetrodon.fr/files/" + e.file.split('.')[0] + '.jpg';
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
-
+                    test.addEventListener('click', () => {
+                        window.location.href = './artwork.html?id=' + e.idart;
+                    })
 
 
 
