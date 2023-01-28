@@ -9,6 +9,11 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
         document.querySelector('.artimg').src = "https://dimetrodon.fr/files/" + data[0][0].file;
         document.getElementById('artname').innerText = data[0][0].name
         document.querySelector('.artistname ').innerText = data[0][0].artistname
+        document.querySelector('.artistname ').addEventListener('click', () => {
+            window.location.href = './artist.html?id=' + data[0][0].idartist;
+
+        })
+
         document.querySelector('.arttext ').innerText = data[0][0].description
 
         let style = document.createElement('p');
