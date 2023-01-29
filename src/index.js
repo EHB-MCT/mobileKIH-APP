@@ -5,10 +5,11 @@ var swiperOptions1 = {
   loop: true,
   autoplay: {
     delay: 1,
-    disableOnInteraction: false
+    disableOnInteraction: false,
+	reverseDirection: true,
   },
   slidesPerView: "auto",
-  speed: 1000,
+  speed: 3500,
   grabCursor: true,
   mousewheelControl: true,
   keyboardControl: true
@@ -18,14 +19,14 @@ var swiperOptions2 = {
   loop: true,
   autoplay: {
     delay: 1,
-    disableOnInteraction: true,
+    disableOnInteraction: false,
+	reverseDirection: false,
   },
   spaceBetween: 0,
-  reverseDirection: true,
   grabCursor: true,
   a11y: false,
   freeMode: true,
-  speed: 11000,
+  speed: 3500,
   loop: true,
   slidesPerView: "auto",
 };

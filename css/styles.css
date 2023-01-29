@@ -39,9 +39,9 @@
 
   header {
     position: fixed;
-    width: 100%;
+    width: 50%;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 10000;
     align-items: center;
     display: flex;
@@ -429,7 +429,9 @@
 
   .socialicons a {
     float: left;
-    width: 20%;
+	margin-top: 10px;
+    width: 15%;
+	margin-right: 10px;
     text-align: center;
     padding: 5px 0PX;
     transition: all 0.3s ease;

@@ -1,3 +1,6 @@
+const { io } = require('../node_modules/socket.io/client-dist/socket.io.js')
+var socket = io('https://dimetrondon-backend.onrender.com/');
+
 function toggles() {
 
     const toggleArrows = document.querySelectorAll('.room__title');
@@ -6,6 +9,12 @@ function toggles() {
     document.querySelectorAll('.bxs-toggle-left').forEach(toggle => {
         toggle.addEventListener('click', () => {
             toggle.classList.toggle('bxs-toggle-right');
+            if (toggle.classList.contains('bxs-toggle-right')) {
+                socket.emit('on', toggle.parentElement.id.split('-')[0]);
+            } else {
+                socket.emit('off', toggle.parentElement.id.split('-')[0]);
+            }
+
         })
     })
 
@@ -119,11 +128,16 @@ fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/1')
             console.log(element)
             let frame = document.createElement('div')
             frame.classList.add('frame');
+            frame.id = element.idframe + '-frame'
 
             let iv = document.createElement('i');
             iv.classList.add('bx');
             iv.classList.add('bxs-cog');
             iv.classList.add('settings');
+            iv.addEventListener('click', () => {
+                window.location.href = './oneFrameEx.html?id=' + element.idframe;
+
+            })
 
             let name = document.createElement('p');
             name.innerText = element.framename
@@ -132,6 +146,7 @@ fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/1')
             another.classList.add('bx');
             another.classList.add('bxs');
             another.classList.add('bxs-toggle-left');
+            if (element.state) another.classList.add('bxs-toggle-right')
 
             frame.appendChild(iv);
             frame.appendChild(name);
