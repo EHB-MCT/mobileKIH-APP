@@ -1,0 +1,77 @@
+.instructions {
+    margin-top: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+  margin-left: 10%;
+  flex-flow: column;
+  height: 80%;
+}
+
+.instructionstext h3,
+.instructionstext span {
+  margin-top: 10px;
+}
+
+.bx {
+  font-size: 40px;
+}
+.full {
+  width: 100% !important;
+  height: 100% !important;
+  display: fixed !important;
+  opacity: 100 !important;
+}
+.videohide {
+  opacity: 0 !important;
+
+  display: none;
+}
+
+.framename ,.roomname{
+  text-align: center;
+}
+
+select {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  padding-right: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+select :checked {
+  border: none;
+}
+
+.hidden{
+    display: none !important;
+}
+
+body,html{
+    height: 100%;
+}
+
+button{
+    align-self: flex-end;
+}
+
+
+#addframe{
+    padding: 10px;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+h2{
+  width: auto !important;
+}

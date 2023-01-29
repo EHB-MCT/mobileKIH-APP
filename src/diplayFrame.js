@@ -4,7 +4,6 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const screenid = urlParams.get('id')
 const slider = document.getElementById('range')
-console.log(screenid)
 slider.addEventListener('input', (e) => {
     document.getElementById('settime').innerText = e.target.value;
 });
@@ -68,7 +67,6 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
 
 
 function emitToDisplay(display) {
-    console.log(display)
-    socket.emit('display-' + screenid, display)
-
+    socket.emit('broadcast-dis', screenid+'-display+'+display)
+    
 }

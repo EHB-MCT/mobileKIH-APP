@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/frames.css" />
+    <link rel="stylesheet" type="text/css" href="../css/addframes.css" />
+    <title>FRAMES</title>
+  </head>
+
+  <body>
+    <header>
+      <ul class="navbar">
+        <li>
+          <a href="./home.html"><img src="/images/KIHLOGOW.png" /></a>
+        </li>
+        <li>
+          <a href="#"><i class="ri-search-2-line"></i></a>
+        </li>
+        <li>
+          <a href="./frames.html"><i class="ri-tv-line nav-selected"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ri-shopping-cart-line"></i></a>
+        </li>
+        <li>
+          <a href="./profile.html"><i class="ri-account-circle-fill"></i></a>
+        </li>
+      </ul>
+      <div class="main">
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
+    </header>
+    <h1>Add frame</h1>
+    <div class="instructions">
+      <div>
+        <h3>Step 1:</h3>
+        <p>
+          Plugin display of rented frame <br />or<br />
+          Browse to [insert link] to set up your own display
+        </p>
+      </div>
+      <div>
+        <h3>Step 2:</h3>
+        <p>
+          Scan Qr Code that shows up on the display<i class="bx bx-qr-scan"></i>
+        </p>
+      </div>
+      <div>
+        <h3>Step 3:</h3>
+        <p>Give your frame a name:</p>
+        <input
+          class="fieldfont hidden framename"
+          placeholder="Frame name...."
+          id="framename"
+          type="text"
+        />
+      </div>
+      <div>
+        <h3>Step 4:</h3>
+        <p>Pick a room where to display it in:</p>
+        <select class="" name="rooms" id="roomname">
+          <option value="" selected disabled hidden>Pick here</option>
+          <option value="living room">Living room</option>
+          <option value="Bathroom">Bathroom</option>
+          <option value="Gym">Gym</option>
+          <option id="inserthere" value="Kitchen">Kitchen</option>
+          <option value="new" id="new">Add new room</option>
+        </select>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <button disabled id="addframe" class="button">Add Frame</button>
+      </div>
+    </div>
+    <video class="full videohide"></video>
+
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../dist/addframe.js"></script>
+  </body>
+</html>
