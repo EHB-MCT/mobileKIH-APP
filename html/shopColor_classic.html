@@ -32,26 +32,26 @@
                 <i class="ri-shopping-cart-line" id="shoppingCart"></i>
             </div>
             <div class="steps">
-                <button class="selected-step">1. FRAME</button>
+                <button>1. FRAME</button>
                 <span></span>
                 <button>2. SIZE</button>
                 <span></span>
-                <button>3. COLOR</button>
+                <button class="selected-step">3. COLOR</button>
             </div>
-            <div class="frame_options">
-                <div class="frame-options-classic">
-                    <img src="../images/shop_step1_classic.png">
-                    <p>Classic</p>
+            <div class="framecolorswrapper">
+                <div class="selectedcolorframe" id="selectedcolorframe">
+                    <img src="../images/shop_step3_classic_brown.svg">
                 </div>
-                <div class="frame-options-modern">
-                    <img src="../images/shop_step1_modern.png">
-                    <p>Modern</p>
+                <div class="coloroptions" id="coloroptions">
+                    <img src="../images/shop_step3_classic_selectedColor_brown.svg" id="brown" class="coloroption">
+                    <img src="../images/shop_step3_classic_selectedColor_gold.svg" id="gold" class="coloroption">
+                    <img src="../images/shop_step3_classic_selectedColor_gray.svg" id="silver" class="coloroption">
+                </div>
+                <div class="nextbuttondiv">
+                    <button class="button unselected">BACK</button>
+                    <button class="button">NEXT</button>
                 </div>
             </div>
-            <div class="nextbuttondiv">
-                <button class="button" id="gotosize">NEXT</button>
-            </div>
-        </div>
     </main>
     <script src="../js/script.js" defer></script>
     <script src="../js/shop.js" defer></script>

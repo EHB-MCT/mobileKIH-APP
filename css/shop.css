@@ -8,6 +8,10 @@ body {
     color: white;
 }
 
+a {
+    font-family: 'Maison';
+}
+
 .steps {
     display: flex;
     justify-content: space-between;
@@ -48,13 +52,17 @@ span {
 
 
 .nextbuttondiv {
-    /*     margin-top: 20%;
+    margin-top: 30px;
     display: flex;
-    justify-content: center; */
-    position: absolute;
-    width: 100%;
-    left: 31.5%;
-    bottom: 5%;
+    justify-content: center;
+
+}
+
+.unselected {
+    background-color: transparent;
+    color: #00bd83;
+    border: 1.5px solid #00bd83;
+    margin-right: 15px;
 }
 
 /***************** STEP ONE: FRAME ****************/
@@ -98,7 +106,7 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .sizeswrapper div {
@@ -112,4 +120,29 @@ span {
 
 .sizeswrapper img:hover {
     border: 2px solid #00bd83;
+}
+
+/***************** STEP THREE: COLOR ****************/
+
+.selectedcolorframe {
+    display: flex;
+    justify-content: center;
+}
+
+.selectedcolorframe img {
+    width: 100%;
+}
+
+.coloroptions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.coloroptions img {
+    margin-left: 20px;
+}
+
+.selectedcolor {
+    border: 1.5px solid #00bd83;
 }
