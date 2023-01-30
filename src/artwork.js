@@ -35,9 +35,7 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
         document.getElementById('contFilter').appendChild(genre);
     })
 
-heart.onclick = () => {
-    heart.classList.toggle('ri-heart-fill');
-}
+
 
 async function test() {
 
@@ -45,7 +43,13 @@ async function test() {
     if (Cookies.get('user')) {
         // likeStatePiece
         let res = await postReq('http://localhost:3000/likeStatePiece', { iduser: JSON.parse(Cookies.get('user')).iduser, idpiece: idArtWork })
-        console.log(res);
+        if (res[0].total != 0) {
+            document.getElementById('heart').classList.add('ri-heart-fill')
+        }
+        heart.onclick = async () => {
+            heart.classList.toggle('ri-heart-fill');
+            let res = await postReq('http://localhost:3000/toggleLike', { iduser: JSON.parse(Cookies.get('user')).iduser, idpiece: idArtWork })
+        }
     }
 }
 
