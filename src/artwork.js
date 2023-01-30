@@ -2,7 +2,8 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const idArtWork = urlParams.get('id')
 let heart = document.querySelector('#heart');
-
+import Cookies from "js-cookie";
+if (idArtWork == null) window.location = "./gallery.html";
 fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
     .then(e => e.json())
     .then(data => {
@@ -34,9 +35,31 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
         document.getElementById('contFilter').appendChild(genre);
     })
 
-	heart.onclick = () => {
-		heart.classList.toggle('ri-heart-fill');
-	}
-	
+heart.onclick = () => {
+    heart.classList.toggle('ri-heart-fill');
+}
 
-	
+async function test() {
+
+
+    if (Cookies.get('user')) {
+        // likeStatePiece
+        let res = await postReq('http://localhost:3000/likeStatePiece', { iduser: JSON.parse(Cookies.get('user')).iduser, idpiece: idArtWork })
+        console.log(res);
+    }
+}
+
+test();
+
+async function postReq(url, data) {
+
+    let resp = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+
+    return await resp.json();
+}

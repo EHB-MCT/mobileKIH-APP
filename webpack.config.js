@@ -16,6 +16,7 @@ module.exports = {
     diplayFrame: './src/diplayFrame.js',
 
     addframe: './src/addframe.js',
+    artwork: './src/artwork.js',
 
 
 

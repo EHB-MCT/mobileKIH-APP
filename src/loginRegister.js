@@ -35,7 +35,7 @@ if (document.URL.includes('signup')) {
 
         if (checkPassword(document.getElementById('signup_password').value, document.getElementById('signup_repeatpassword').value)) {
             console.log('signing up...');
-            let res = await postReq(`http://127.0.0.1:3000/register`, user);
+            let res = await postReq(`${BASE_URL}register`, user);
             if (res.status = 'ok') {
                 Cookies.set('user', JSON.stringify(res.wat[0]))
             }
