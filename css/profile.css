@@ -4,17 +4,23 @@ body {
     background-color: #080809;
 }
 
+.button{
+	margin: 0;		
+}
 .wrapper {
     color: white;
 }
 
 .user_info {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.artbutton{
+	margin-top: 10px;
+}
 .liked-and-rented-wrapper {
     margin-top: 30px;
 }
@@ -35,6 +41,11 @@ body {
     width: 100%;
 }
 
+#likebutton {
+    width: 37%;
+    height: 60PX;
+    margin-right: 10PX;
+  }
 .profile-buttons :nth-child(2) {
     background-color: transparent;
     border: 2px solid #00bd83;
@@ -45,4 +56,12 @@ body {
     background-color: #00bd83;
     color: #080809;
     opacity: 1;
+}
+
+
+.column img,
+video {
+    margin-top: 8px !important;
+    vertical-align: middle;
+    width: 100%;
 }

@@ -1,18 +1,3 @@
-const { io } = require('../node_modules/socket.io/client-dist/socket.io.js')
-var socket = io('https://dimetrondon-backend.onrender.com/');
-import Cookies from "js-cookie";
-
-if (!Cookies.get('user')) window.location = './login.html'
-
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const screenid = urlParams.get('id')
-const slider = document.getElementById('range')
-slider.addEventListener('input', (e) => {
-    document.getElementById('settime').innerText = e.target.value;
-});
-
-
 fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
     .then(e => e.json())
     .then(data => {
@@ -68,9 +53,3 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
             }
         });
     })
-
-
-function emitToDisplay(display) {
-    socket.emit('broadcast-dis', screenid + '-display+' + display)
-
-}
