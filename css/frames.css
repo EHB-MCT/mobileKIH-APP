@@ -23,6 +23,7 @@
     max-height: 400px;
     transition: max-height 0.25s ease-in;
 }
+
 .plus {
     display: flex;
     justify-content: flex-end;
@@ -45,6 +46,10 @@
 }
 
 
+.room__frames {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .frame {
     display: flex;

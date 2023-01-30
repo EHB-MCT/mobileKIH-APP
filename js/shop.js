@@ -1,5 +1,12 @@
 let CHOSENCOLOR;
 
+let next = document.querySelector('#nextBtn');
+let fullscreen = document.querySelector('.fullscreen');
+
+next.onclick = () => {
+    fullscreen.classList.toggle('open');
+}
+
 document.getElementById('coloroptions').addEventListener('click', (e) => {
     CHOSENCOLOR = e.target.id;
     console.log(CHOSENCOLOR)
@@ -25,3 +32,5 @@ document.getElementById('gotosize').addEventListener('click', () => {
     console.log('click')
     location.href = '../html/shopSize';
 })
+
+

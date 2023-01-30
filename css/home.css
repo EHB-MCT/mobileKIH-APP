@@ -23,7 +23,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;	
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -56,44 +56,40 @@ h1 {
   height: 150PX;
   background-color: #080809 !important;
 }
-.bottomwrapper p{
-	padding: 0 10PX 0 0;
-  }
+
+.bottomwrapper p {
+  padding: 0 10PX 0 0;
+}
 
 .bottomwrapper2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 15px;
-	padding: 2px 10% 0 7%;
-	color: #f3f0ec;
-	width: 100%;
-	height: 150px;
-	background-color: #080809 !important;
-  }
-  .bottomwrapper2 p{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: -1px;
-	padding: 2px 0px 0 1px;
-	color: #f3f0ec;
-	width: 100%;
-	height: 150PX;
-  }
-  .bottomwrapper2 button{
-	margin-right: 10PX;
-  }
-
-.button {
-  font-size: 15px;
-  padding: 0;
-  width: 170px;
-  height: 45px;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 2px 10% 0 7%;
+  color: #f3f0ec;
+  width: 100%;
+  height: 150px;
+  background-color: #080809 !important;
 }
-#browseButton{
-	width: 80px;
+
+.bottomwrapper2 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1px;
+  padding: 2px 0px 0 1px;
+  color: #f3f0ec;
+  width: 100%;
+  height: 150PX;
+}
+
+.bottomwrapper2 button {
+  margin-right: 10PX;
+}
+
+#browseButton {
+  width: 80px;
 }
 
 .buttonwrapper {
