@@ -20,7 +20,7 @@
 .bx-arrow-back {
     cursor: pointer;
     font-size: 25px;
-	margin-top: 5%;
+    margin-top: 5%;
 }
 
 .bx-chevron-left {
@@ -57,7 +57,7 @@
 
 .filter__section {
     margin-top: 40px;
-	
+
 }
 
 .filter__section__filters {
@@ -83,12 +83,14 @@
 }
 
 .filters__endButton {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
-.button{
-	margin-top: 50px;
-	margin-right: 15px;
+
+.button {
+    margin: 50px 0px 20px 0px;
+    font-family: 'Maison';
+    cursor: pointer;
 }
 
 .column canvas {
