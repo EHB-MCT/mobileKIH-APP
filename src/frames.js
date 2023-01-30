@@ -1,5 +1,8 @@
 const { io } = require('../node_modules/socket.io/client-dist/socket.io.js')
 var socket = io('https://dimetrondon-backend.onrender.com/');
+import Cookies from "js-cookie";
+
+if (!Cookies.get('user')) window.location = './login.html'
 
 function toggles() {
 
@@ -35,11 +38,11 @@ function toggles() {
 
 // add new room
 document.getElementById('plus_addroom').addEventListener('click', () => {
-        location.href = "./addframe.html"
+    location.href = "./addframe.html"
 });
 
-
-fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/1')
+let userId = JSON.parse(Cookies.get('user')).iduser
+fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/' + userId)
     .then(e => e.json())
     .then(data => {
         data = data[0]

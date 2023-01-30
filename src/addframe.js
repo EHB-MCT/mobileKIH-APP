@@ -1,5 +1,8 @@
 import QrScanner from "qr-scanner"; // if installed via package and bundling with a module bundler like webpack or rollup
 const Swal = require("sweetalert2");
+import Cookies from "js-cookie";
+
+if (!Cookies.get('user')) window.location = './signup.html'
 
 let videoElem = document.querySelector(".full");
 const { io } = require("../node_modules/socket.io/client-dist/socket.io.js");
@@ -9,7 +12,7 @@ let guid = "";
 const qrScanner = new QrScanner(
   videoElem,
   (result) => {
-    socket.emit("broadcast", result+'-load');
+    socket.emit("broadcast", result + '-load');
     guid = result;
     qrScanner.destroy();
     videoElem.remove();

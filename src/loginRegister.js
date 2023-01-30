@@ -1,49 +1,50 @@
 const BASE_URL = "https://dimetrondon-backend.onrender.com/";
 import Cookies from "js-cookie";
+if (Cookies.get('user')) window.location = './home.html'
+if (document.URL.includes('login')) {
 
-console.log(JSON.parse(Cookies.get('user')))
-if(document.URL.includes('login'))
-{
-
-
-
-document.getElementById('login_button').addEventListener('click', async (event) => {
-    event.preventDefault();
-    console.log('submitted');
-    const user = {
-        email: document.getElementById('login_email').value,
-        password: document.getElementById('login_password').value
-    }
-    let result = await postReq(`${BASE_URL}login`, user);
-    if(result.status== 'ok'){
-        console.log(result);
-        Cookies.set('user',JSON.stringify(result.data))
-        location.href = "./index.html";
-    }
-});
+    document.getElementById('login_button').addEventListener('click', async (event) => {
+        event.preventDefault();
+        console.log('submitted');
+        const user = {
+            email: document.getElementById('login_email').value,
+            password: document.getElementById('login_password').value
+        }
+        let result = await postReq(`${BASE_URL}login`, user);
+        if (result.status == 'ok') {
+            console.log(result);
+            Cookies.set('user', JSON.stringify(result.data))
+            location.href = "./home.html";
+        }
+    });
 }
 
 
-if(document.URL.includes('signup')){
+if (document.URL.includes('signup')) {
 
 
 
-document.getElementById('signup_button').addEventListener('click', (event) => {
-    event.preventDefault();
-    const user = {
-        email: document.getElementById('login_email').value,
-        password: document.getElementById('login_password').value,
-        firstname: document.getElementById('login_firstname').value,
-        lastname: document.getElementById('login_lastname').value
-    }
+    document.getElementById('signup_button').addEventListener('click', async (event) => {
+        event.preventDefault();
+        const user = {
+            email: document.getElementById('signup_email').value,
+            password: document.getElementById('signup_password').value,
+            firstname: document.getElementById('signup_firstname').value,
+            lastname: document.getElementById('signup_lastname').value
+        }
 
-    if (checkPassword) {
-        console.log('repeated password is not same');
-    } else {
-        console.log('signing up...');
-    }
+        if (checkPassword(document.getElementById('signup_password').value, document.getElementById('signup_repeatpassword').value)) {
+            console.log('signing up...');
+            let res = await postReq(`http://127.0.0.1:3000/register`, user);
+            if (res.status = 'ok') {
+                Cookies.set('user', JSON.stringify(res.wat[0]))
+            }
 
-})
+        } else {
+            console.log('repeated password is not same');
+        }
+
+    })
 }
 
 
