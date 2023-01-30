@@ -2,7 +2,7 @@ const { io } = require('../node_modules/socket.io/client-dist/socket.io.js')
 var socket = io('https://dimetrondon-backend.onrender.com/');
 import Cookies from "js-cookie";
 
-if (Cookies.get('user')) window.location = './login.html'
+if (!Cookies.get('user')) window.location = './login.html'
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
