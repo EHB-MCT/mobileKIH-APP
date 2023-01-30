@@ -275,6 +275,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f3f0ec !important;
   }
 
   span.psw {
@@ -421,9 +422,9 @@
 
   .socialicons a {
     float: left;
-	margin-top: 10px;
+    margin-top: 10px;
     width: 15%;
-	margin-right: 10px;
+    margin-right: 10px;
     text-align: center;
     padding: 5px 0PX;
     transition: all 0.3s ease;
