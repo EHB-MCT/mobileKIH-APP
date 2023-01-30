@@ -5,7 +5,7 @@ body {
 }
 
 .wrapper {
-    color: white;
+    color: white !important;
 }
 
 a {
@@ -145,4 +145,23 @@ span {
 
 .selectedcolor {
     border: 1.5px solid #00bd83;
+}
+
+/********************** SHOPPING CART **************************/
+
+
+.cartItems__item {
+    display: flex;
+    align-items: center;
+}
+
+.cartItems__item__img {
+    width: 70%;
+}
+
+.rentbuttondiv {
+    position: fixed;
+    left: 36.5%;
+    width: 68.5%;
+    bottom: 20px;
 }

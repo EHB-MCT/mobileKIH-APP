@@ -25,6 +25,7 @@
   "dependencies": {
     "css-loader": "^6.7.3",
     "js-cookie": "^3.0.1",
+    "lightpick": "^1.6.2",
     "lodash": "^4.17.21",
     "qr-scanner": "^1.4.2",
     "socket.io": "^4.5.4",
