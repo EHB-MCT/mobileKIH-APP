@@ -1,15 +1,33 @@
-const BASE_URL = "http://localhost:3001/";
+const BASE_URL = "https://dimetrondon-backend.onrender.com/";
+import Cookies from "js-cookie";
 
-document.getElementById('login_button').addEventListener('click', (event) => {
+console.log(JSON.parse(Cookies.get('user')))
+if(document.URL.includes('login'))
+{
+
+
+
+document.getElementById('login_button').addEventListener('click', async (event) => {
     event.preventDefault();
     console.log('submitted');
     const user = {
         email: document.getElementById('login_email').value,
         password: document.getElementById('login_password').value
     }
-    let result = postReq(`${BASE_URL}login`, user);
-    console.log(result);
+    let result = await postReq(`${BASE_URL}login`, user);
+    if(result.status== 'ok'){
+        console.log(result);
+        Cookies.set('user',JSON.stringify(result.data))
+        location.href = "./index.html";
+    }
 });
+}
+
+
+if(document.URL.includes('signup')){
+
+
+
 document.getElementById('signup_button').addEventListener('click', (event) => {
     event.preventDefault();
     const user = {
@@ -26,6 +44,7 @@ document.getElementById('signup_button').addEventListener('click', (event) => {
     }
 
 })
+}
 
 
 async function postReq(url, data) {

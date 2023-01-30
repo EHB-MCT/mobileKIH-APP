@@ -9,16 +9,20 @@
     justify-content: space-between;
 }
 
-.room__frames {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 
 .room__frames {
-    display: none;
+    max-height: 0;
+    transition: max-height 0.25s ease-out;
+    overflow: hidden;
 }
 
+
+.room__frames--selected {
+    max-height: 400px;
+    transition: max-height 0.25s ease-in;
+}
 .plus {
     display: flex;
     justify-content: flex-end;
@@ -40,9 +44,7 @@
     margin-top: 30px;
 }
 
-.room__frames--selected {
-    display: flex;
-}
+
 
 .frame {
     display: flex;
