@@ -1,6 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const idArtWork = urlParams.get('id')
+let heart = document.querySelector('#heart');
 
 fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
     .then(e => e.json())
@@ -32,3 +33,10 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
         document.getElementById('contFilter').appendChild(subject);
         document.getElementById('contFilter').appendChild(genre);
     })
+
+	heart.onclick = () => {
+		heart.classList.toggle('ri-heart-fill');
+	}
+	
+
+	
