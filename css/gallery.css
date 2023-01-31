@@ -16,7 +16,10 @@
 
 
 
-
+.button{
+	padding: 10px 15px 10px 10px;
+	font-size: 22px;
+}
 .bx-arrow-back {
     cursor: pointer;
     font-size: 25px;
