@@ -77,16 +77,15 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
 
 async function test() {
 
-
     if (Cookies.get('user')) {
         // likeStatePiece
-        let res = await postReq('http://localhost:3000/likeStatePiece', { iduser: JSON.parse(Cookies.get('user')).iduser, idpiece: idArtWork })
+        let res = await postReq('https://dimetrondon-backend.onrender.com/likeStatePiece', { iduser: JSON.parse(Cookies.get('user')).iduser, idpiece: idArtWork })
         if (res[0].total != 0) {
             document.getElementById('heart').classList.add('ri-heart-fill')
         }
         heart.onclick = async () => {
             heart.classList.toggle('ri-heart-fill');
-            let res = await postReq('http://localhost:3000/toggleLike', { iduser: JSON.parse(Cookies.get('user')).iduser, idpiece: idArtWork })
+            let res = await postReq('https://dimetrondon-backend.onrender.com/toggleLike', { iduser: JSON.parse(Cookies.get('user')).iduser, idpiece: idArtWork })
         }
         $(function() {
             var start = moment()
@@ -119,6 +118,58 @@ async function test() {
     }else{
         deleteT.remove();
     }
+    fetch('https://dimetrondon-backend.onrender.com/getSimilarPieces/'+idArtWork).then(e=> e.json()).then(
+        fields=>{
+            console.log(fields);
+            fields.forEach((e,i) => {
+                if (e.idgenre == 3) {
+                    let source = document.createElement("source")
+                    source.src = "https://dimetrodon.fr/files/" + e.file;
+                    source.type = "video/mp4"
+                    let test = document.createElement('video');
+                    test.classList.add('test')
+                    test.autoplay = true;
+                    test.loop = true;
+                    test.muted = true;
+                    test.load();
+                    test.append(source)
+                    document.querySelectorAll('.artcolumn')[i % 2].appendChild(test)
+                    test.addEventListener('click', () => {
+                        window.location.href = './artwork.html?id=' + e.idart;
+                    })
+
+                } else if (e.idgenre == 1) {
+                    let test = document.createElement('img');
+                    let blur = document.createElement('img');
+                    test.classList.add('image')
+                    blur.classList.add('blur')
+                    test.src = "https://dimetrodon.fr/files/" + e.file.split('.')[0] + '.jpg';
+                    document.querySelectorAll('.artcolumn')[i % 2].appendChild(test)
+                    test.addEventListener('click', () => {
+                        window.location.href = './artwork.html?id=' + e.idart;
+                    })
+
+
+
+
+                } else {
+                    let test = document.createElement('img');
+                    let blur = document.createElement('img');
+                    test.classList.add('image')
+                    blur.classList.add('blur')
+                    test.src = "https://dimetrodon.fr/files/" + e.file;
+                    blur.src = "https://dimetrodon.fr/files/" + e.file;
+                    test.addEventListener('click', () => {
+                        window.location.href = './artwork.html?id=' + e.idart;
+                    })
+                    document.querySelectorAll('.artcolumn')[i % 2].appendChild(test)
+
+
+                }
+            });
+        }
+    )
+
 }
 
 test();
