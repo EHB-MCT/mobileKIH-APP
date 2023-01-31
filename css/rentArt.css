@@ -1,0 +1,10 @@
+@import url('./styles.css');
+
+body {
+    background-color: black;
+}
+
+
+.torentArt__img {
+    width: 80%;
+}
