@@ -147,6 +147,60 @@ span {
     border: 1.5px solid #00bd83;
 }
 
+
+.fullscreen{
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	z-index: 10000;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+}
+.open{
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup{
+	height: 110px;
+	width: 300px;
+	background-color: #00BD83;
+}
+.popup h5{
+	color: black;
+	font-family: 'Clearface';
+	font-weight: 400;
+	display: flex;
+	padding: 3% 0 0 0;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
+}
+.popupwrapperbutton{
+	display: flex;
+	justify-content: space-between;
+	padding: 3% 20% 5% 20%;
+}
+.popupwrapperbutton button{
+	background-color: #00BD83;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+	padding: 10px 10px 10px 10px;
+}
+.popupbutton{
+	border-style: solid !important;
+	margin: 0 0px 0 0px;
+	border-color: black !important;
+	border-width: 0.1px !important; 
+}
+#checkoutBtn{
+	background-color: black;
+	color: #00BD83;
+}
 /********************** SHOPPING CART **************************/
 
 
