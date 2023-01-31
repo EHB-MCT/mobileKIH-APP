@@ -39,7 +39,8 @@ h1 {
 }
 .button{
 	font-size: 19px;
-	padding: 10px 10px 10px 10px;
+	width: auto;
+	padding: 10px;
 }
 
 .swiper-slide img {
@@ -48,13 +49,10 @@ h1 {
   height: 100%;
   object-fit: cover;
 }
-#signupButton{
-	width: 190px;
-}
 
 .bottomwrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space- space-between;
   align-items: center;
   margin-top: 40px;
   padding: 2px 10% 0 7%;
@@ -66,6 +64,7 @@ h1 {
 
 .bottomwrapper p {
   padding: 0 10PX 0 0;
+  width: 250px;
 }
 
 .bottomwrapper2 {

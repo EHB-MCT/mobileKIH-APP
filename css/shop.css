@@ -209,6 +209,9 @@ span {
 	background-color: black;
 	color: #00BD83;
 }
+canvas{
+	z-index: -1;
+}
 /********************** SHOPPING CART **************************/
 
 
