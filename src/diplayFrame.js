@@ -8,6 +8,8 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const screenid = urlParams.get('id')
 const slider = document.getElementById('range')
+if (!screenid) window.location = './frames.html'
+
 slider.addEventListener('input', (e) => {
     document.getElementById('settime').innerText = e.target.value;
 });

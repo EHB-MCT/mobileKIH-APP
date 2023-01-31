@@ -4,3 +4,14 @@
     padding: 5px 10px;
     display: inline-block
 }
+
+.model{
+    width: 100%;
+}
+
+.zyzzcontainer img{
+    padding-top: 100px;
+    margin: 0px 7% -100px 0;
+    width: 300px;
+    z-index: -100;
+}
