@@ -1,7 +1,9 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const idArtWork = urlParams.get('id')
-let heart = document.querySelector('#heart');
+
+let heart = document.querySelector('#heart'); // NTM ALI
+
 import Cookies from "js-cookie";
 if (idArtWork == null) window.location = "./gallery.html";
 fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)

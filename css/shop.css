@@ -63,8 +63,15 @@ span {
     color: #00bd83;
     border: 1.5px solid #00bd83;
     margin-right: 15px;
+
 }
 
+.button{
+	font-size: 25px;
+	padding: 10px 15px 10px 15px;
+	margin: 0 10px 0 10px;
+	width: auto;
+}
 /***************** STEP ONE: FRAME ****************/
 
 .frame_options {
@@ -165,8 +172,8 @@ span {
 }
 
 .popup{
-	height: 110px;
-	width: 300px;
+	height: 120px;
+	width: 325px;
 	background-color: #00BD83;
 }
 .popup h5{
@@ -177,19 +184,20 @@ span {
 	padding: 3% 0 0 0;
 	justify-content: center;
 	align-items: center;
-	font-size: 22px;
+	font-size: 27px;
 }
 .popupwrapperbutton{
+	width: auto;
 	display: flex;
 	justify-content: space-between;
-	padding: 3% 20% 5% 20%;
+	padding: 3% 10% 5% 10%;
 }
 .popupwrapperbutton button{
 	background-color: #00BD83;
     border: none;
-    font-size: 19px;
+	font-size: 25px;
     cursor: pointer;
-	padding: 10px 10px 10px 10px;
+	padding: 10px 15px 10px 15px;
 }
 .popupbutton{
 	border-style: solid !important;
@@ -214,11 +222,13 @@ span {
 }
 
 .rentbuttondiv {
-    position: fixed;
-    left: 36.5%;
-    width: 68.5%;
-    bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
 }
+
+/* the fucking monkey who did position:fixed on rentbuttondiv can neck it */
 
 /* .ri-shopping-cart-line ::before {
     content: 'sdfjsj';

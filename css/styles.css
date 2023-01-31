@@ -87,7 +87,9 @@
   }
 
   .button {
-    padding: 15px;
+    padding: 10px 0px 0 0PX;
+	width: 100px;
+	font-size: 35px;
     text-decoration: none;
     background-color: #00bd83;
     color: black;
@@ -337,19 +339,15 @@
 
   .artbutton {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 25% 0 25%;
     margin-top: 40PX;
   }
-
+  
 
   #rentbutton {
     padding: 0;
-    width: 37%;
-    height: 60PX;
-    margin-left: 10px;
-    margin: 0;
-    font-size: 18PX;
+    font-size: 23PX;
   }
 
   #rentbutton p {
