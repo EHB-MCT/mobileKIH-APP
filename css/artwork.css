@@ -1,3 +1,5 @@
+@import url('../css/styles.css');
+
 .selectedFilters__filter {
     background-color: #E9E5DC;
     margin-left: 10px;
@@ -8,7 +10,9 @@
 .model{
     width: 100%;
 }
-
+.artbutton{
+	padding: 0 22% 0 22%;
+}
 .zyzzcontainer img{
     padding-top: 100px;
     margin: 0px 7% -100px 0;
