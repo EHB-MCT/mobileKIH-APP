@@ -1,4 +1,7 @@
-import _ from 'lodash';
+import Cookies from "js-cookie";
+
+if (document.URL.includes('home') && !Cookies.get('user') ) window.location = './login.html'
+
 
 // import styles bundle
 var swiperOptions1 = {
