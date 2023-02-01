@@ -87,12 +87,23 @@
     font-family: 'Maison';
     color: white;
     font-weight: 100;
+<<<<<<< HEAD
     height: 70px;
     padding: 15px 9px 5px 7%;
     width: 85%;
     margin-bottom: 30px;
     background-color: black;
   }
+=======
+	margin-bottom: 30px;
+	background-color: black;
+	margin-top: -1px;
+	width: auto;
+	margin-right: 15%;
+	height: auto;
+	padding: 15px 15px 15px 7%;
+}
+>>>>>>> 770413103dbdd8392bc7d6943a735fc6d9d60755
 
   button {
     font-family: 'Maison';
@@ -367,16 +378,13 @@
     justify-content: space-between;
     padding: 0 25% 0 25%;
     margin-top: 40PX;
+	background-color: #CBD5FF;
   }
 
 
   #rentbutton {
-    padding-right: 20px;
+    padding-right: 110px;
     font-size: 22PX;
-  }
-
-  #rentbutton p {
-    padding: 0px 10px;
   }
 
   .moreartwrapper {
@@ -495,7 +503,6 @@
       top: -1000%;
       width: 50px;
       left: 0%;
-      height: 400px;
       background-color: #080809;
       display: flex;
       flex-direction: column;
