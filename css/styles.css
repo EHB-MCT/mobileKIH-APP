@@ -87,9 +87,9 @@
   }
 
   .button {
-    padding: 10px 0px 0 0PX;
+	padding: 10px 15px 10px 10px;
+	font-size: 22px;
 	width: 100px;
-	font-size: 35px;
     text-decoration: none;
     background-color: #00bd83;
     color: black;
