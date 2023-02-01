@@ -1,64 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/currentlyDisplayed.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="../js/checkbox.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/currentlyDisplayed.css"
+    />
     <title>KIH</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <ul class="navbar">
-            <li><a href="#"><img src="/images/KIHLOGOW.png"></a></li>
-            <li><a href="./gallery.html"><i class="ri-search-2-line"></i></a></li>
-            <li><a href="./frames.html"><i class="ri-tv-line"></i></a></li>
-            <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-            <li><a href="./profile.html"><i class="ri-account-circle-fill"></i></a></li>
-        </ul>
-        <div class="main">
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </div>
+      <ul class="navbar">
+        <li>
+          <a href="#"><img src="/images/KIHLOGOW.png" /></a>
+        </li>
+        <li>
+          <a href="./gallery.html"><i class="ri-search-2-line"></i></a>
+        </li>
+        <li>
+          <a href="./frames.html"><i class="ri-tv-line"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ri-shopping-cart-line"></i></a>
+        </li>
+        <li>
+          <a href="./profile.html"><i class="ri-account-circle-fill"></i></a>
+        </li>
+      </ul>
+      <div class="main">
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
     </header>
     <main>
-        <h1>Currently displayed art</h1>
-        <div class="wrapper">
-            <div id="arrowBackToFrames-div">
-                <a href="./frames.html"><i class='bx bx-arrow-back bx-flip-vertical' id="arrowBackToFrames"></i></a>
-            </div>
-            <div class="displayed-art">
-                <div>
-                    <img src="../images/testKader.png" id="kader">
-                    <img src="../images/16070866_nazar-boncuk-rectangle.png" id="displayed-art-img">
-                </div>
-                <p>art name</p>
-            </div>
-            <div class="slidecontainer">
-                <p>Set art duration (hours)</p>
-                <div class="slidecontainer__slider">
-                    <input type="range" min="0" max="24" value="50" class="slider" id="range">
-                    <p id="settime">24</p>
-                </div>
-            </div>
-            <div class="rented-art">
-                <h3>Currently rented</h3>
-                <div class="row">
-                    <div class="column">
-
-                    </div>
-                    <div class="column">
-
-                    </div>
-                </div>
-            </div>
+      <h1>Currently displayed art</h1>
+      <div class="wrapper">
+        <div id="arrowBackToFrames-div">
+          <a href="./frames.html"
+            ><i
+              class="bx bx-arrow-back bx-flip-vertical"
+              id="arrowBackToFrames"
+            ></i
+          ></a>
         </div>
+        <div class="displayed-art">
+          <div>
+            <img src="../images/testKader.png" id="kader" />
+            <img
+              src="../images/16070866_nazar-boncuk-rectangle.png"
+              id="displayed-art-img"
+            />
+          </div>
+          <p>art name</p>
+        </div>
+        <div class="slidecontainer">
+          <p>Set art duration (hours)</p>
+          <div class="slidecontainer__slider">
+            <input
+              type="range"
+              min="1"
+              max="24"
+              value="1"
+              class="slider"
+              id="range"
+            />
+            <p id="settime">24</p>
+          </div>
+        </div>
+        <div class="rented-art">
+          <h3>Currently rented</h3>
+          <!-- <form id="selectedPieces"> -->
+            <div class="row">
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+          <!-- </form> -->
+        </div>
+      </div>
     </main>
-
 
     <script src="../js/script.js" defer></script>
     <script src="../dist/diplayFrame.js" defer></script>
-</body>
+  </body>
+</html>
