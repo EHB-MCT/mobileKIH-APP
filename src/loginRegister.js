@@ -5,12 +5,12 @@ if (document.URL.includes('login')) {
 
     document.getElementById('login_button').addEventListener('click', async (event) => {
         event.preventDefault();
-        console.log('submitted');
         const user = {
             email: document.getElementById('login_email').value,
             password: document.getElementById('login_password').value
         }
         let result = await postReq(`${BASE_URL}login`, user);
+        console.log(result)
         if (result.status == 'ok') {
             console.log(result);
             Cookies.set('user', JSON.stringify(result.data))
