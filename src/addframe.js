@@ -8,12 +8,14 @@ let videoElem = document.querySelector(".full");
 const { io } = require("../node_modules/socket.io/client-dist/socket.io.js");
 var socket = io("https://dimetrondon-backend.onrender.com/");
 let guid = "";
+let ipp = "";
 
 const qrScanner = new QrScanner(
   videoElem,
   (result) => {
-    socket.emit("broadcast", result + '-load');
+    socket.emit("broadcast", result.split("+")[0] + '-load');
     guid = result;
+    ipp = result.split("+")[1]
     qrScanner.destroy();
     videoElem.remove();
 
@@ -80,6 +82,7 @@ document.getElementById("addframe").addEventListener("click", () => {
     roomname: document.getElementById("roomname").value,
     guid: guid,
     iduser: 1,
+    ip: ipp
   };
 
   fetch("https://dimetrondon-backend.onrender.com/createFrame", {
