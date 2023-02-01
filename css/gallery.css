@@ -1,7 +1,7 @@
 @import url('../css/styles.css');
 
 .filter {
-    top margin: 0 5% 0 5%;
+    	margin: 0 5% 0 5%;
 }
 
 .filter__section__title {
@@ -17,7 +17,8 @@
 
 
 .button {
-    padding: 10px 15px 10px 10px;
+    padding: 10px 15px 10px 15px;
+	width: auto;
     font-size: 18px;
 }
 
