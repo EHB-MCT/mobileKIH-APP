@@ -87,9 +87,9 @@
   }
 
   .button {
-	padding: 10px 15px 10px 10px;
-	font-size: 22px;
-	width: 100px;
+    padding: 10px 15px 10px 10px;
+    font-size: 22px;
+    width: 100px;
     text-decoration: none;
     background-color: #00bd83;
     color: black;
@@ -193,7 +193,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 4px;
     width: 100%;
   }
 
@@ -221,16 +220,21 @@
     width: 100%;
     font-size: 15px;
     opacity: 80%;
-    padding: 12px 0px;
+    padding: 7px 0px;
     margin: 22px 0;
     display: inline-block;
     box-sizing: border-box;
   }
 
+  input:focus {
+    outline: none;
+    border-bottom: 1.5px solid #00bd83;
+  }
+
   .fieldfont {
     width: 100%;
     border: 0;
-    border-bottom: 1px solid;
+    border-bottom: 1.5px solid;
     outline: 0;
     background: transparent;
   }
@@ -343,7 +347,7 @@
     padding: 0 25% 0 25%;
     margin-top: 40PX;
   }
-  
+
 
   #rentbutton {
     padding: 0;
