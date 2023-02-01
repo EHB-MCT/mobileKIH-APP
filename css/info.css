@@ -1,0 +1,56 @@
+@import url('../css/styles.css');
+
+
+.info__title {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 10px 0px;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.info__title {
+    padding-bottom: 10px;
+    border-bottom: 1.3px solid black
+}
+
+/* .info__title h3 {
+    width: 50%;
+}
+ */
+
+
+.info__text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+}
+
+.bx-chevron-left {
+    transition: 0.2s;
+}
+
+.clicked {
+    transform: rotate(-90deg);
+    transition: 0.2s;
+}
+
+.clickedTitle {
+    border-bottom: 1.3px solid #00bd83 !important;
+}
+
+.contact {
+    margin-top: 50px;
+}
+
+.contact div {
+    display: flex;
+    margin-top: 10px;
+}
+
+.contact div i {
+    margin-right: 10px;
+}
