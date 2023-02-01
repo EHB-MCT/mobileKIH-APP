@@ -4,7 +4,37 @@ body {
     background-color: black;
 }
 
+.wrapper {
+    color: white;
+}
+
+.torentArt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
 
 .torentArt__img {
     width: 80%;
+    margin-bottom: 10px;
+}
+
+.availability {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.availability p {
+    display: inline-block;
+}
+
+.availability--green {
+    color: #00bd83;
+}
+
+.nextbuttondiv {
+    display: flex;
+    justify-content: center;
 }
