@@ -1,7 +1,6 @@
 const { io } = require('../node_modules/socket.io/client-dist/socket.io.js')
 var socket = io('https://dimetrondon-backend.onrender.com/');
 import Cookies from "js-cookie";
-import { keys } from "lodash";
 
 if (!Cookies.get('user')) window.location = './login.html'
 
@@ -14,6 +13,59 @@ if (!screenid) window.location = './frames.html'
 slider.addEventListener('input', (e) => {
     document.getElementById('settime').innerText = e.target.value;
 });
+
+socket.on(screenid,(obj)=>{
+    let e = JSON.parse(obj)
+    console.log(e);
+    document.getElementById('showhere').innerHTML =''
+
+
+    if (e.genre == "Video") {
+        let source = document.createElement("source")
+        source.src = "https://dimetrodon.fr/files/" + e.file;
+        source.type = "video/mp4"
+        let test = document.createElement('video');
+
+        test.name = e.idart
+        test.autoplay = true;
+        test.loop = true;
+        test.muted = true;  
+        test.load();
+        test.id = "displayed-art-img"
+
+        test.append(source)
+        document.getElementById('showhere').appendChild(test)
+
+
+    } else if (e.genre == "3D") {
+        let test = document.createElement('img');
+        let blur = document.createElement('img');
+        test.id = "displayed-art-img"
+
+        test.name = e.idart
+        test.src = "https://dimetrodon.fr/files/" + e.file.split('.')[0] + '.jpg';
+        document.getElementById('showhere').appendChild(test)
+
+
+
+
+
+    } else {
+        let test = document.createElement("img");
+        let blur = document.createElement("img");
+        test.id = "displayed-art-img"
+        test.src = "https://dimetrodon.fr/files/" + e.file;
+        blur.src = "https://dimetrodon.fr/files/" + e.file;
+    
+        document.getElementById('showhere').appendChild(test)
+    
+
+    }
+    // <img
+    //   src="../images/16070866_nazar-boncuk-rectangle.png"
+    //   id="displayed-art-img"
+    // />
+})
 
 
 fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
@@ -181,3 +233,4 @@ async function postReq(url, data) {
 
     return await resp.json();
 }
+

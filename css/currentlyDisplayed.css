@@ -4,21 +4,30 @@
     margin-top: 30px;
 }
 
-.displayed-art {
-    display: flex;
-    flex-direction: column;
-}
+
+
+
+
+
+  #showhere{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:85%;
+    min-height: 20vh ;
+    max-height: 20vh ;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url("../images/testKader.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
 .displayed-art :last-child {
     align-self: center;
 }
 
-#displayed-art-img {
-    width: 85%;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    margin-left: 7.5%;
-}
 
 #kader {
     width: 86%;
@@ -86,4 +95,25 @@ video {
     margin-top: 8px !important;
     vertical-align: middle;
     width: 100%;
+}
+
+#showhere img,#showhere video{
+        object-fit: contain;
+        z-index: 5;
+        display: block;
+        max-width: 66%;
+        max-height: 16vh !important;
+        width: auto;
+        margin: 0 !important;
+}
+
+
+.displayed-art p {
+    text-align: center;
+}
+
+.displayed-art{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
