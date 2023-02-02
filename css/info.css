@@ -1,6 +1,9 @@
 @import url('../css/styles.css');
 
-
+#test{
+	max-width: 25px;
+	max-height: 25px;
+}
 .info__title {
     display: flex;
     justify-content: space-between;
