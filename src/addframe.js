@@ -31,7 +31,7 @@ fetch("https://dimetrondon-backend.onrender.com/getUserRooms", {
     Accept: "application/json",
     "Content-Type": "application/json",
   },
-  body: JSON.stringify({ iduser: 1 }),
+  body: JSON.stringify({ iduser: JSON.parse(Cookies.get('user')).iduser }),
 })
   .then((e) => e.json())
   .then((e) => {
