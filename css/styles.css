@@ -55,7 +55,7 @@
     font-size: 30px;
     font-family: 'Clearface';
     font-weight: 100;
-    padding: 15px 15px 10px 7%;
+    padding: 5px 15px 10px 7%;
     width: 50%;
     margin-top: 50px;
     background-color: #CBD5FF;
@@ -371,7 +371,7 @@
 
 
   #rentbutton {
-    padding-right: 110px;
+
     font-size: 22PX;
   }
 
@@ -457,6 +457,9 @@
     background-color: #CBD5FF;
     font-size: 30px;
     text-decoration: none;
+  }
+  #heart{
+	font-size: 30px;
   }
 
   /**********************************ARTIST PAGE**********************************************/
