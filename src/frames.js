@@ -13,9 +13,12 @@ function toggles() {
         toggle.addEventListener('click', () => {
             toggle.classList.toggle('bxs-toggle-right');
             if (toggle.classList.contains('bxs-toggle-right')) {
-                socket.emit('on', toggle.parentElement.id.split('-')[0]);
+                console.log("on")
+                socket.emit('broadcast-sreen', toggle.parentElement.id.split('-')[2] + "on");
             } else {
-                socket.emit('off', toggle.parentElement.id.split('-')[0]);
+                console.log("off")
+
+                socket.emit('broadcast-sreen', toggle.parentElement.id.split('-')[2] + "off");
             }
 
         })
@@ -63,14 +66,14 @@ fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/' + userId)
         data.forEach(element => {
             let div = document.createElement('div');
             div.classList.add('toggle');
-
             let ico = document.createElement('i');
             ico.classList.add('bx');
             ico.classList.add('bx-chevron-left');
             div.appendChild(ico);
             let mainDiv = document.createElement('div')
             mainDiv.classList.add('room__frames');
-            mainDiv.id = element.idroom + '-room__frames';
+            console.log(element.ip)
+            mainDiv.id = element.idroom + '-room__frames-' + element.ip;
 
             console.log(document.getElementById(element.idroom + '-room').childNodes[0].childNodes)
             if (document.getElementById(element.idroom + '-room').childNodes[0].childNodes.length == 1) {
@@ -82,7 +85,7 @@ fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/' + userId)
             console.log(element)
             let frame = document.createElement('div')
             frame.classList.add('frame');
-            frame.id = element.idframe + '-frame'
+            frame.id = element.idframe + '-frame-' + element.ip
 
             let iv = document.createElement('i');
             iv.classList.add('bx');
@@ -106,7 +109,7 @@ fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/' + userId)
             frame.appendChild(name);
             frame.appendChild(another);
 
-            document.getElementById(`${element.idroom}-room__frames`).appendChild(frame);
+            document.getElementById(`${element.idroom}-room__frames-${element.ip}`).appendChild(frame);
 
 
 

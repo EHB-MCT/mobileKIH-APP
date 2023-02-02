@@ -14,7 +14,7 @@ const qrScanner = new QrScanner(
   videoElem,
   (result) => {
     socket.emit("broadcast", result.split("+")[0] + '-load');
-    guid = result;
+    guid = result.split("+")[0];
     ipp = result.split("+")[1]
     qrScanner.destroy();
     videoElem.remove();
