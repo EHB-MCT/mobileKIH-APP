@@ -8,6 +8,22 @@ body {
     color: white;
 }
 
+.button{
+	font-size: 22px;
+	width: auto;
+	padding: 10px;
+}
+h6{
+	margin-bottom: 90px;
+	background-color: #CBD5FF;
+	color: black;
+	margin-top: -1px;
+	width: auto;
+	margin-right: 15%;
+	height: auto;
+	padding: 15px 15px 15px 7%;
+	
+}
 .torentArt {
     display: flex;
     flex-direction: column;

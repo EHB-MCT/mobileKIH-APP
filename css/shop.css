@@ -11,6 +11,16 @@ body {
 a {
     font-family: 'Maison';
 }
+h6{
+	margin-bottom: 20px;
+	background-color: #CBD5FF;
+	color: black;
+	margin-top: -1px;
+	width: auto;
+	margin-right: 15%;
+	height: auto;
+	padding: 15px 15px 15px 7%;
+}
 
 .steps {
     display: flex;
@@ -67,9 +77,8 @@ span {
 }
 
 .button{
-	font-size: 25px;
+	font-size: 22px;
 	padding: 10px 15px 10px 15px;
-	margin: 0 10px 0 10px;
 	width: auto;
 }
 /***************** STEP ONE: FRAME ****************/
@@ -172,8 +181,10 @@ span {
 }
 
 .popup{
-	height: 120px;
-	width: 325px;
+	height: auto;
+	width: auto;
+	padding: 10px;
+	margin: 30px;
 	background-color: #00BD83;
 }
 .popup h5{
@@ -181,7 +192,7 @@ span {
 	font-family: 'Clearface';
 	font-weight: 400;
 	display: flex;
-	padding: 3% 0 0 0;
+	padding: 3% 5% 0 10%;
 	justify-content: center;
 	align-items: center;
 	font-size: 27px;
@@ -195,9 +206,9 @@ span {
 .popupwrapperbutton button{
 	background-color: #00BD83;
     border: none;
-	font-size: 25px;
+	font-size: 22px;
     cursor: pointer;
-	padding: 10px 15px 10px 15px;
+	padding: 10px 15px 10px 15px
 }
 .popupbutton{
 	border-style: solid !important;

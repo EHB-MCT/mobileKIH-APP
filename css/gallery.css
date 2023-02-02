@@ -1,7 +1,7 @@
 @import url('../css/styles.css');
 
 .filter {
-    margin: 0 5% 0 5%;
+    	margin: 0 5% 0 5%;
 }
 
 .filter__section__title {
@@ -16,10 +16,12 @@
 
 
 
-.button{
-	padding: 10px 15px 10px 10px;
-	font-size: 22px;
+.button {
+    padding: 10px 15px 10px 15px;
+	width: auto;
+    font-size: 18px;
 }
+
 .bx-arrow-back {
     cursor: pointer;
     font-size: 25px;
@@ -33,6 +35,30 @@
     transition: 0.2s;
 }
 
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.topbar__searchbar {
+    width: 40%;
+}
+
+.topbar__searchbar__input {
+    width: 50%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    margin: 0 !important;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1.5px solid #00bd83;
+}
 
 #filterButton {
     padding: 10px 20px;
@@ -90,7 +116,7 @@
     justify-content: center;
 }
 
-.button {
+.filters__endButton button {
     margin-top: 50px;
     margin-right: 15px;
 }

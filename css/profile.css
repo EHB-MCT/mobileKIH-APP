@@ -10,6 +10,13 @@ body {
 .wrapper {
     color: white;
 }
+h6{
+	background-color: #CBD5FF;
+	color: black;
+	font-weight: 500;
+	margin-top: -1px;
+	height: 85px;
+}
 
 .user_info {
     margin-top: 10px;
