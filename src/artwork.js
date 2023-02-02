@@ -10,7 +10,7 @@ import Cookies from "js-cookie";
 if (idArtWork == null) window.location = "./gallery.html";
 fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
     .then(e => e.json())
-    .then(data => {
+    .then(async data => {
         {
             if (data[0][0].genre == "Video") {
                 let source = document.createElement("source");
@@ -42,8 +42,12 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
             }
 
         }
+        let res = await fetch('https://dimetrondon-backend.onrender.com/getStock/' + idArtWork);
+        let total = await res.json();
+        total = total[0][0].total;
+        if (total > 0) {
 
-
+        }
 
         document.getElementById('artname').innerText = data[0][0].name
         document.querySelector('.artistname ').innerText = data[0][0].artistname
