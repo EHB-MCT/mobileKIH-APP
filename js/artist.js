@@ -1,6 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const idArtist = urlParams.get('id')
+if (idArtist == null) window.location = "./gallery.html";
 
 fetch('https://dimetrondon-backend.onrender.com/getArtist/' + idArtist)
     .then(e => e.json())
