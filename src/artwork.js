@@ -46,15 +46,16 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
         let total = await res.json();
         total = total[0][0].total;
         if (total > 0) {
-
+            document.querySelector('#hereplz').innerText = total + ' Kunstwerken beschikbaar.'
         }
 
         document.getElementById('artname').innerText = data[0][0].name
-        document.querySelector('.artistname ').innerText = data[0][0].artistname
-        document.querySelector('.artistname ').addEventListener('click', () => {
-            window.location.href = './artist.html?id=' + data[0][0].idartist;
+        document.querySelector('.artistname ').innerText = data[0][0].artistname +
 
-        })
+            document.querySelector('.artistname ').addEventListener('click', () => {
+                window.location.href = './artist.html?id=' + data[0][0].idartist;
+
+            })
 
         document.querySelector('.arttext ').innerText = data[0][0].description
 
