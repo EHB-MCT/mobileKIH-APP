@@ -10,15 +10,15 @@ function toggles() {
 
 
     document.querySelectorAll('.bxs-toggle-left').forEach(toggle => {
-        toggle.addEventListener('click', () => {
+        toggle.addEventListener('click', (e) => {
             toggle.classList.toggle('bxs-toggle-right');
             if (toggle.classList.contains('bxs-toggle-right')) {
                 console.log("on")
-                socket.emit('broadcast-sreen', toggle.parentElement.id.split('-')[2] + "on");
+                socket.emit('broadcast-sreen', toggle.ip + "on");
             } else {
                 console.log("off")
 
-                socket.emit('broadcast-sreen', toggle.parentElement.id.split('-')[2] + "off");
+                socket.emit('broadcast-sreen', toggle.ip + "off");
             }
 
         })
@@ -73,7 +73,7 @@ fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/' + userId)
             let mainDiv = document.createElement('div')
             mainDiv.classList.add('room__frames');
             console.log(element.ip)
-            mainDiv.id = element.idroom + '-room__frames-' + element.ip;
+            mainDiv.id = element.idroom + '-room__frames';
 
             console.log(document.getElementById(element.idroom + '-room').childNodes[0].childNodes)
             if (document.getElementById(element.idroom + '-room').childNodes[0].childNodes.length == 1) {
@@ -103,13 +103,14 @@ fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/' + userId)
             another.classList.add('bx');
             another.classList.add('bxs');
             another.classList.add('bxs-toggle-left');
+            another.id = element.ip;
             if (element.state) another.classList.add('bxs-toggle-right')
 
             frame.appendChild(iv);
             frame.appendChild(name);
             frame.appendChild(another);
 
-            document.getElementById(`${element.idroom}-room__frames-${element.ip}`).appendChild(frame);
+            document.getElementById(`${element.idroom}-room__frames`).appendChild(frame);
 
 
 

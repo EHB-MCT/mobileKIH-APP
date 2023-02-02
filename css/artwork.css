@@ -24,6 +24,16 @@ h3 {
     margin-top: 30px;
 }
 
+.huurtekst {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    margin-top: 40px;
+    font-size: 18px;
+    margin-bottom: -20px;
+}
+
 .zyzzcontainer img {
     padding-top: 100px;
     margin: 0px 7% -100px 0;
@@ -37,4 +47,8 @@ h3 {
 
 .moreofthis {
     margin-top: 40px;
+}
+
+h2 {
+    width: auto !important;
 }

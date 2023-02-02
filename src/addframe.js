@@ -3,7 +3,7 @@ const Swal = require("sweetalert2");
 import Cookies from "js-cookie";
 
 if (!Cookies.get('user')) window.location = './signup.html'
-
+let user = JSON.parse(Cookies.get('user'));
 let videoElem = document.querySelector(".full");
 const { io } = require("../node_modules/socket.io/client-dist/socket.io.js");
 var socket = io("https://dimetrondon-backend.onrender.com/");
@@ -31,7 +31,7 @@ fetch("https://dimetrondon-backend.onrender.com/getUserRooms", {
     Accept: "application/json",
     "Content-Type": "application/json",
   },
-  body: JSON.stringify({ iduser: 1 }),
+  body: JSON.stringify({ iduser: JSON.parse(Cookies.get('user')).iduser }),
 })
   .then((e) => e.json())
   .then((e) => {
@@ -81,7 +81,7 @@ document.getElementById("addframe").addEventListener("click", () => {
     framename: document.getElementById("framename").value,
     roomname: document.getElementById("roomname").value,
     guid: guid,
-    iduser: 1,
+    iduser: user.iduser,
     ip: ipp
   };
 

@@ -1,16 +1,16 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const idArtWork = urlParams.get('id')
+const Swal = require("sweetalert2");
 
 let heart = document.querySelector('#heart'); // NTM ALI
-let rent = document.querySelector('#heart'); // NTM ALI
 let deleteT = document.querySelector('.artbutton'); // NTM ALI
 
 import Cookies from "js-cookie";
 if (idArtWork == null) window.location = "./gallery.html";
 fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
     .then(e => e.json())
-    .then(data => {
+    .then(async data => {
         {
             if (data[0][0].genre == "Video") {
                 let source = document.createElement("source");
@@ -23,36 +23,39 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
                 test.load();
                 test.append(source);
                 document.querySelector(".zyzzcontainer").innerHTML = '';
-        
+
                 document.querySelector(".zyzzcontainer").appendChild(test);
-              } else if (data[0][0].genre == "3D") {
+            } else if (data[0][0].genre == "3D") {
                 document.querySelector(
-                  ".zyzzcontainer"
-                ).innerHTML = `<model-viewer class="model" src="https://dimetrodon.fr/files/${
-                  data[0][0].file
-                }" poster="https://dimetrodon.fr/files/${
-                  data[0][0].file.split(".")[0]
-                }.jpg" shadow-intensity="4" auto-rotate auto-rotate-delay="10" touch-action="pan-y" alt="A 3D model carousel">`;
-              } else {
+                    ".zyzzcontainer"
+                ).innerHTML = `<model-viewer class="model" src="https://dimetrodon.fr/files/${data[0][0].file
+                }" poster="https://dimetrodon.fr/files/${data[0][0].file.split(".")[0]
+                    }.jpg" shadow-intensity="4" auto-rotate auto-rotate-delay="10" touch-action="pan-y" alt="A 3D model carousel">`;
+            } else {
                 let test = document.createElement("img");
                 test.classList.add("image");
                 test.src = "https://dimetrodon.fr/files/" + data[0][0].file;
                 document.querySelector(".zyzzcontainer").innerHTML = '';
-        
+
                 document.querySelector(".zyzzcontainer").appendChild(test);
-        
-              }
+
+            }
 
         }
-
-
+        let res = await fetch('https://dimetrondon-backend.onrender.com/getStock/' + idArtWork);
+        let total = await res.json();
+        total = total[0][0].total;
+        if (total > 0) {
+            document.querySelector('#hereplz').innerText = total + ' Kunstwerken beschikbaar.'
+        }
 
         document.getElementById('artname').innerText = data[0][0].name
-        document.querySelector('.artistname ').innerText = data[0][0].artistname
-        document.querySelector('.artistname ').addEventListener('click', () => {
-            window.location.href = './artist.html?id=' + data[0][0].idartist;
+        document.querySelector('.artistname ').innerText = data[0][0].artistname +
 
-        })
+            document.querySelector('.artistname ').addEventListener('click', () => {
+                window.location.href = './artist.html?id=' + data[0][0].idartist;
+
+            })
 
         document.querySelector('.arttext ').innerText = data[0][0].description
 
@@ -87,41 +90,62 @@ async function test() {
             heart.classList.toggle('ri-heart-fill');
             let res = await postReq('https://dimetrondon-backend.onrender.com/toggleLike', { iduser: JSON.parse(Cookies.get('user')).iduser, idpiece: idArtWork })
         }
-        $(function() {
+        $(function () {
             var start = moment()
-            var end = moment().add(1,"days");
-        
+            var end = moment().add(1, "days");
+
             function cb(start, end) {
                 console.log(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
             }
-        
+
             $('#rentbutton').daterangepicker({
                 "autoApply": true,
                 ranges: {
-                    'Today': [moment(), moment()],
-                    'Yesterday': [moment().add(29, 'days'), moment()],
-                    'Last Month': [moment().add(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    '1 Week': [moment(), moment().add(7, 'days')],
+                    '2 Weken': [moment(), moment().add(14, 'days')],
+                    '1 Maand': [moment(), moment().add(1, 'months')],
+                    '2 Maanden': [moment(), moment().add(2, 'months')],
+                    '3 Maanden': [moment(), moment().add(3, 'months')]
                 },
                 "showCustomRangeLabel": false,
-                "opens":"center",
+                "opens": "center",
                 "startDate": "01/25/2023",
                 "endDate": "01/31/2023"
-            }, function(start, end, label) {
-              console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+            }, function (start, end, label) {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: `Wilt U did kunstwerk van &#10; ${start.format('L')} tot ${end.format('L')} uitlenen ? `,
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then(async (result) => {
+                    if (result.isConfirmed) {
+                        let res = await postReq('https://dimetrondon-backend.onrender.com/addHistory', { iduser: JSON.parse(Cookies.get('user')).iduser, idart: idArtWork, status: "renting", fromdate: start.format("YYYY-MM-DD HH:mm:ss"), todate: end.format("YYYY-MM-DD HH:mm:ss") })
+                        Swal.fire(
+                            'Succes!',
+                            'Het kunstwerk werd gehuurd.',
+                            'success'
+                        ).then(e => {
+                            console.log("done")
+                        })
+                    }
+                })
             });
-        
+
             cb(start, end);
-        
+
         });
 
 
-    }else{
+    } else {
         deleteT.remove();
     }
-    fetch('https://dimetrondon-backend.onrender.com/getSimilarPieces/'+idArtWork).then(e=> e.json()).then(
-        fields=>{
+    fetch('https://dimetrondon-backend.onrender.com/getSimilarPieces/' + idArtWork).then(e => e.json()).then(
+        fields => {
             console.log(fields);
-            fields.forEach((e,i) => {
+            fields.forEach((e, i) => {
                 if (e.idgenre == 3) {
                     let source = document.createElement("source")
                     source.src = "https://dimetrodon.fr/files/" + e.file;

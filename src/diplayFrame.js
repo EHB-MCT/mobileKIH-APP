@@ -3,6 +3,7 @@ var socket = io('https://dimetrondon-backend.onrender.com/');
 import Cookies from "js-cookie";
 
 if (!Cookies.get('user')) window.location = './login.html'
+let user = JSON.parse(Cookies.get('user'));
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -14,10 +15,10 @@ slider.addEventListener('input', (e) => {
     document.getElementById('settime').innerText = e.target.value;
 });
 
-socket.on(screenid,(obj)=>{
+socket.on(screenid, (obj) => {
     let e = JSON.parse(obj)
     console.log(e);
-    document.getElementById('showhere').innerHTML =''
+    document.getElementById('showhere').innerHTML = ''
 
 
     if (e.genre == "Video") {
@@ -29,7 +30,7 @@ socket.on(screenid,(obj)=>{
         test.name = e.idart
         test.autoplay = true;
         test.loop = true;
-        test.muted = true;  
+        test.muted = true;
         test.load();
         test.id = "displayed-art-img"
 
@@ -56,9 +57,9 @@ socket.on(screenid,(obj)=>{
         test.id = "displayed-art-img"
         test.src = "https://dimetrodon.fr/files/" + e.file;
         blur.src = "https://dimetrodon.fr/files/" + e.file;
-    
+
         document.getElementById('showhere').appendChild(test)
-    
+
 
     }
     // <img
@@ -68,18 +69,18 @@ socket.on(screenid,(obj)=>{
 })
 
 
-fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
+fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER/' + user.iduser)
     .then(e => e.json())
     .then(async data => {
-        let fetchres = await fetch('https://dimetrondon-backend.onrender.com/getFrameSettings/'+screenid)
+        let fetchres = await fetch('https://dimetrondon-backend.onrender.com/getFrameSettings/' + screenid)
 
         let result = await fetchres.json();
         let settings = (JSON.parse(result[0][0].settings))
-        let keysToCheck =[]
+        let keysToCheck = []
         document.getElementById('range').value = settings.interval;
         document.getElementById('settime').innerText = settings.interval;
 
-        if(Object.keys(settings).length){
+        if (Object.keys(settings).length) {
             keysToCheck = settings.ids;
         }
         console.log(keysToCheck.includes(32))
@@ -92,10 +93,10 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
                 source.type = "video/mp4"
                 let test = document.createElement('video');
                 test.classList.add('test')
-                if(keysToCheck.includes(e.idart)){
+                if (keysToCheck.includes(e.idart)) {
                     test.classList.add('chek')
 
-                }else{
+                } else {
                     test.classList.add('che')
 
                 }
@@ -116,10 +117,10 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
                 let blur = document.createElement('img');
                 test.classList.add('image')
                 blur.classList.add('blur')
-                if(keysToCheck.includes(e.idart)){
+                if (keysToCheck.includes(e.idart)) {
                     test.classList.add('chek')
 
-                }else{
+                } else {
                     test.classList.add('che')
 
                 }
@@ -138,10 +139,10 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
                 let blur = document.createElement('img');
                 test.classList.add('image')
                 blur.classList.add('blur')
-                if(keysToCheck.includes(e.idart)){
+                if (keysToCheck.includes(e.idart)) {
                     test.classList.add('chek')
 
-                }else{
+                } else {
                     test.classList.add('che')
 
                 }
@@ -160,7 +161,7 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
             graySelected: false,
             "styles": {
                 "span.imgCheckbox.imgChked": {
-                    "border":"0px solid #f3f0ec"
+                    "border": "0px solid #f3f0ec"
                 },
                 "span.imgCheckbox.imgChked img": {
 
@@ -173,9 +174,9 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
                     "transform": "scale(0.9)"
                 }
             },
-            onclick: async function(el){
-                let ids = getSelected();   
-                let res = await postReq("https://dimetrondon-backend.onrender.com/updateSettings", {idframe: screenid,settings :JSON.stringify({ids: ids,interval: document.getElementById('range').value})})
+            onclick: async function (el) {
+                let ids = getSelected();
+                let res = await postReq("https://dimetrondon-backend.onrender.com/updateSettings", { idframe: screenid, settings: JSON.stringify({ ids: ids, interval: document.getElementById('range').value }) })
                 console.log(res);
             }
         });
@@ -184,7 +185,7 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
             preselect: true,
             "styles": {
                 "span.imgCheckbox.imgChked": {
-                    "border":"0px solid #f3f0ec"
+                    "border": "0px solid #f3f0ec"
                 },
                 "span.imgCheckbox.imgChked img": {
 
@@ -197,9 +198,9 @@ fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER')
                     "transform": "scale(0.9)"
                 }
             },
-            onclick: async function(el){
-                let ids = getSelected();   
-                let res = await postReq("https://dimetrondon-backend.onrender.com/updateSettings", {idframe: screenid,settings :JSON.stringify({ids: ids,interval: document.getElementById('range').value})})
+            onclick: async function (el) {
+                let ids = getSelected();
+                let res = await postReq("https://dimetrondon-backend.onrender.com/updateSettings", { idframe: screenid, settings: JSON.stringify({ ids: ids, interval: document.getElementById('range').value }) })
                 console.log(res);
             }
         });
@@ -212,10 +213,10 @@ function emitToDisplay(display) {
 }
 
 
-function getSelected()  {
+function getSelected() {
     let all = document.querySelectorAll('.imgChked');
-    let idsList = [] 
-    all.forEach(e=>{idsList.push(parseInt(e.childNodes[0].name))});
+    let idsList = []
+    all.forEach(e => { idsList.push(parseInt(e.childNodes[0].name)) });
     console.log(idsList);
     return idsList;
 };

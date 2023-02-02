@@ -101,8 +101,13 @@
   }
 
   .button {
+<<<<<<< HEAD
     padding: 10px 15px 10px 10px;
     font-size: 18px;
+=======
+    padding: 10px 10px 10px 10px;
+    font-size: 22px;
+>>>>>>> c339ddd77b9b8d455bd23b34e10e0061e88f1b68
     width: 100px;
     text-decoration: none;
     background-color: #00bd83;
