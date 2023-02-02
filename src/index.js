@@ -56,7 +56,6 @@ fetch("https://dimetrondon-backend.onrender.com/getHomePage").then(e => e.json()
       document.querySelectorAll('.swiper-wrapper')[i % 2].appendChild(di)
       test.addEventListener('click', () => {
         document.location.href = "./artwork.html?id=" + e.idart
-
       })
 
     } else if (e.idgenre == 1) {

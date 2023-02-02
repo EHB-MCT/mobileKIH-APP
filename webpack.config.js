@@ -17,6 +17,7 @@ module.exports = {
 
     addframe: './src/addframe.js',
     artwork: './src/artwork.js',
+    profile: './src/profile.js',
 
 
 
