@@ -359,7 +359,6 @@
 
   .arttext {
     font-family: 'Maison';
-    font-size: 18px;
     color: #ffffff;
   }
 
@@ -421,7 +420,6 @@
   }
 
   .artisttextwrapper {
-    margin: 5% 7% 0 7%;
     margin-top: 130px;
   }
 
@@ -433,6 +431,8 @@
 
   #artistwork {
     color: #080809;
+    margin-top: 50px;
+
   }
 
   .artistsocials p {
@@ -440,11 +440,9 @@
   }
 
   .artistsocials {
-    margin-top: 10px;
-    font-size: 22px;
+    margin-top: 30px;
     width: 100%;
     overflow: auto;
-    padding: 0 0 0 7%;
   }
 
   .socialicons a {
@@ -453,11 +451,11 @@
     width: 15%;
     margin-right: 10px;
     text-align: center;
-    padding: 5px 0PX;
+    padding: 8px 0px 0px;
     transition: all 0.3s ease;
     color: #080809;
     background-color: #CBD5FF;
-    font-size: 36px;
+    font-size: 30px;
     text-decoration: none;
   }
 
