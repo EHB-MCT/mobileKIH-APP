@@ -5,14 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script
-	type="module"
-	src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-  ></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/artwork.css">
@@ -39,25 +36,29 @@
 		<div class="artistbuttonwrapper">
 			<a class="artistname artistbutton button"></a>
 		</div>
-		<div class="arttextwrapper">
-			<p class="arttext"></p>
-		</div>
-		<div id="contFilter">
-		</div>
+		<div class="wrapper">
+			<div class="arttextwrapper">
+				<p class="arttext"></p>
+			</div>
+			<div id="contFilter">
+			</div>
 
-		<div class="artbutton">
-			<button id="likebutton" class="button"><i id="heart" class='ri-heart-add-line'></i></button>
-			<button id="rentbutton" class="button">HUUR</button>
+			<div class="artbutton">
+				<button id="likebutton" class="button"><i id="heart" class='ri-heart-add-line'></i></button>
+				<button id="rentbutton" class="button">HUUR</button>
 
-		</div>
-		<div class="moreartwrapper">
-			<h4>Meer van dit</h4>
-			<div class="artrow">
-				<div class="artcolumn">
-				</div>
-				<div class="artcolumn">
+			</div>
+
+			<div class="moreofthis">
+				<h3>Meer van dit</h3>
+				<div class="artrow">
+					<div class="artcolumn">
+					</div>
+					<div class="artcolumn">
+					</div>
 				</div>
 			</div>
+
 		</div>
 	</main>
 	<script type="text/javascript" src="../js/script.js"></script>

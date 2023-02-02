@@ -174,7 +174,9 @@
   .selectedFilters__filter {
     display: flex;
     background-color: #E9E5DC;
-    padding: 10px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     align-items: center;
   }
 
@@ -345,17 +347,14 @@
 
   .artistbuttonwrapper {
     padding-left: 0px;
+    margin-top: 40px;
   }
 
   .artistbutton {
-    padding: 4px;
+    padding: 10px;
     width: 30%;
     font-size: 15px;
-    margin: 0;
-  }
-
-  .arttextwrapper {
-    margin: 5% 7% 0 7%;
+    margin-left: 7%;
   }
 
   .arttext {
@@ -378,20 +377,14 @@
     font-size: 22PX;
   }
 
-  .moreartwrapper {
-    font-size: 30px;
-    margin: 5% 7% 0 7%;
-    color: #ffffff;
-  }
-
   .artrow {
     display: flex;
     flex-wrap: wrap;
   }
 
   .artcolumn {
-    flex: 25%;
-    max-width: 25%;
+    flex: 50%;
+    max-width: 50%;
     padding: 0 5px;
   }
 

@@ -1,25 +1,40 @@
 @import url('../css/styles.css');
 
-.selectedFilters__filter {
-    background-color: #E9E5DC;
-    margin-left: 10px;
-    padding: 5px 10px;
-    display: inline-block
+#contFilter {
+    margin-top: 30px;
 }
 
-.model{
+.selectedFilters__filter {
+    display: inline-block;
+}
+
+.model {
     width: 100%;
 }
-.artbutton{
-	padding: 0 22% 0 22%;
+
+h3 {
+    color: white;
 }
-.zyzzcontainer img{
+
+.artbutton {
+    padding: 0 22% 0 22%;
+}
+
+.arttext {
+    margin-top: 30px;
+}
+
+.zyzzcontainer img {
     padding-top: 100px;
     margin: 0px 7% -100px 0;
     width: 300px;
     z-index: -100;
 }
 
-.drp-calendar{
+.drp-calendar {
     display: none !important;
+}
+
+.moreofthis {
+    margin-top: 40px;
 }
