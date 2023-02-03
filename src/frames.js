@@ -13,12 +13,12 @@ function toggles() {
         toggle.addEventListener('click', (e) => {
             toggle.classList.toggle('bxs-toggle-right');
             if (toggle.classList.contains('bxs-toggle-right')) {
-                console.log("on")
-                socket.emit('broadcast-sreen', toggle.ip + "on");
+
+                socket.emit('broadcast-sreen', toggle.id + "on");
             } else {
                 console.log("off")
 
-                socket.emit('broadcast-sreen', toggle.ip + "off");
+                socket.emit('broadcast-sreen', toggle.id + "off");
             }
 
         })

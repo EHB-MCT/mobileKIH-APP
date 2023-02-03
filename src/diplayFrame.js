@@ -69,7 +69,7 @@ socket.on(screenid, (obj) => {
 })
 
 
-fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER/' + user.iduser)
+fetch('https://dimetrondon-backend.onrender.com/getRentOfUser/' + user.iduser)
     .then(e => e.json())
     .then(async data => {
         let fetchres = await fetch('https://dimetrondon-backend.onrender.com/getFrameSettings/' + screenid)
