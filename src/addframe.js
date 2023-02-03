@@ -1,11 +1,8 @@
-import QrScanner from "qr-scanner"; // if installed via package and bundling with a module bundler like webpack or rollup
+import QrScanner from 'qr-scanner'; // if installed via package and bundling with a module bundler like webpack or rollup
+
 const Swal = require("sweetalert2");
 import Cookies from "js-cookie";
 
-const opts = {
-  retry: true,                // keep checking until a QR is found, default: false
-  retryUntilTimeout: 10000    // milliseconds until giving up, default: never give up
-}
 if (!Cookies.get('user')) window.location = './signup.html'
 let user = JSON.parse(Cookies.get('user'));
 let videoElem = document.querySelector(".full");
@@ -17,7 +14,6 @@ let ipp = "";
 const qrScanner = new QrScanner(
   videoElem,
   (result) => {
-    console.log(result);
     socket.emit("broadcast", result.split("+")[0] + '-load');
     guid = result.split("+")[0];
     ipp = result.split("+")[1]
@@ -26,9 +22,7 @@ const qrScanner = new QrScanner(
 
     document.querySelector(".bx-qr-scan").remove();
     document.getElementById("framename").classList.toggle("hidden");
-  },
-  { returnDetailedScanResult: true},
-
+  }
   // No options provided. This will use the old api and is deprecated in the current version until next major version.
 );
 
@@ -54,12 +48,9 @@ fetch("https://dimetrondon-backend.onrender.com/getUserRooms", {
 document.querySelector(".bx-qr-scan").addEventListener("click", () => {
   videoElem.requestFullscreen();
   videoElem.classList.toggle("videohide");
-  qrScanner.onDecodeError(e=>{
-    console.log(e)
-  })
-  qrScanner.start();
-  qrScanner.$overlay;
+  qrScanner.setInversionMode('both');
 
+  qrScanner.start();
 });
 
 document.getElementById("roomname").addEventListener("change", function () {
