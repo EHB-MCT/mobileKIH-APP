@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 if (!Cookies.get('user')) window.location = './login.html';
 let user = JSON.parse(Cookies.get('user'));
-document.getElementById('profilepic').src = `https://source.boringavatars.com/marble/120/${user.firstname} ${user.lastname}?colors=264653,2a9d8f,e9c46a,f4a261,e76f51`
+document.getElementById('profilepic').src = `https://source.boringavatars.com/marble/120/${user.firstname} ${user.lastname}?colors=fc6256,E9E5DC,00bd83,ffcfb5,CBD5FF`
 function getLikes() {
     console.log(user)
     fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER/' + user.iduser)
