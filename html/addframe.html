@@ -30,46 +30,54 @@
       <li>
         <a href="./profile.html"><i class="ri-account-circle-fill"></i></a>
       </li>
-	  <li><a href="./info.html"><i class="ri-information-line"></i></a></li>
+      <li><a href="./info.html"><i class="ri-information-line"></i></a></li>
     </ul>
     <div class="main">
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>
   </header>
   <h1>Voeg scherm toe</h1>
-  <div class="instructions">
-    <div>
-      <h3>Stap 1:</h3>
-      <p>
-        Plug de scherm van het gehuurd kader<br />og<br />
-        Ga naar [link invoegen] om uw eigen scherm in te stellen
-      </p>
+  <div class="wrapper">
+    <div class="backtoframes">
+      <a href="./frames.html"><i class="ri-arrow-left-line"></i></a>
     </div>
-    <div>
-      <h3>Stap 2:</h3>
-      <p>
-        Scan de QR-code dat op de scherm tevoorschijn komt<i class="bx bx-qr-scan"></i>
-      </p>
-    </div>
-    <div>
-      <h3>Stap 3:</h3>
-      <p>Geef uw scherp een naam:</p>
-      <input class="fieldfont hidden framename" placeholder="Frame name...." id="framename" type="text" />
-    </div>
-    <div>
-      <h3>Stap 4:</h3>
-      <p>Kies een kamer waar u het wilt ophangen:</p>
-      <select class="" name="rooms" id="roomname">
-        <option value="" selected disabled hidden>Kies hier</option>
-        <option value="living room">Woonkamer</option>
-        <option value="Bathroom">Badkamer</option>
-        <option value="Gym">Fitness</option>
-        <option id="inserthere" value="Keuken">Keuken</option>
-        <option value="new" id="new">Voeg nieuw kamer toe</option>
-      </select>
-    </div>
-    <div style="display: flex; justify-content: center">
-      <button disabled id="addframe" class="button">Voeg scherm toe</button>
+    <div class="instructions">
+      <div class="stap">
+        <h3>Stap 1:</h3>
+        <p>
+          Plug de scherm van het gehuurd kader<br />of<br />
+          Ga naar [link invoegen] om uw eigen scherm in te stellen
+        </p>
+      </div>
+      <div class="stap">
+        <h3>Stap 2:</h3>
+        <p>
+          Scan de QR-code dat op de scherm tevoorschijn komt</i>
+        </p>
+        <div>
+          <i class="bx bx-qr-scan"></i>
+        </div>
+      </div>
+      <div class="stap">
+        <h3>Stap 3:</h3>
+        <p>Geef uw scherm een naam:</p>
+        <input class="fieldfont hidden framename" placeholder="Frame name...." id="framename" type="text" />
+      </div>
+      <div class="stap">
+        <h3>Stap 4:</h3>
+        <p>Kies een kamer waar u het wilt ophangen:</p>
+        <select class="" name="rooms" id="roomname">
+          <option value="" selected disabled hidden>Kies hier</option>
+          <option value="living room">Woonkamer</option>
+          <option value="Bathroom">Badkamer</option>
+          <option value="Gym">Fitness</option>
+          <option id="inserthere" value="Keuken">Keuken</option>
+          <option value="new" id="new">Voeg nieuw kamer toe</option>
+        </select>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <button disabled id="addframe" class="button">Voeg scherm toe</button>
+      </div>
     </div>
   </div>
   <video class="full videohide"></video>

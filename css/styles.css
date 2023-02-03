@@ -103,7 +103,6 @@
   .button {
     padding: 10px 10px 10px 10px;
     font-size: 22px;
-    width: 100px;
     text-decoration: none;
     background-color: #00bd83;
     color: black;
@@ -458,8 +457,9 @@
     font-size: 30px;
     text-decoration: none;
   }
-  #heart{
-	font-size: 30px;
+
+  #heart {
+    font-size: 30px;
   }
 
   /**********************************ARTIST PAGE**********************************************/
