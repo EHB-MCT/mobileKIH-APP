@@ -50,7 +50,7 @@ fetch('https://dimetrondon-backend.onrender.com/getArtPiecePage/' + idArtWork)
         }
 
         document.getElementById('artname').innerText = data[0][0].name
-        document.querySelector('.artistname ').innerText = data[0][0].artistname +
+        document.querySelector('.artistname ').innerText = data[0][0].artistname;
 
             document.querySelector('.artistname ').addEventListener('click', () => {
                 window.location.href = './artist.html?id=' + data[0][0].idartist;
@@ -119,7 +119,7 @@ async function test() {
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
+                    confirmButtonText: 'Ja!'
                 }).then(async (result) => {
                     if (result.isConfirmed) {
                         let res = await postReq('https://dimetrondon-backend.onrender.com/addHistory', { iduser: JSON.parse(Cookies.get('user')).iduser, idart: idArtWork, status: "renting", fromdate: start.format("YYYY-MM-DD HH:mm:ss"), todate: end.format("YYYY-MM-DD HH:mm:ss") })
@@ -128,6 +128,7 @@ async function test() {
                             'Het kunstwerk werd gehuurd.',
                             'success'
                         ).then(e => {
+          window.location.href = "./profile.html";
                             console.log("done")
                         })
                     }
@@ -138,6 +139,19 @@ async function test() {
 
         });
 
+        fetch('https://dimetrondon-backend.onrender.com/getRentOfUser/' + JSON.parse(Cookies.get('user')).iduser)
+        .then(e => e.json())
+        .then(data => {
+            let idg = (data[0].map(e=> {return e.idart}))
+            console.log(idg.includes(idArtWork))
+            console.log((idArtWork))
+            console.log((idg))
+
+            if(idg.includes(parseInt(idArtWork))){
+                document.getElementById('rentbutton').remove();
+
+            }
+        })
 
     } else {
         deleteT.remove();

@@ -6,6 +6,9 @@ let user = JSON.parse(Cookies.get('user'));
 document.getElementById('profilepic').src = `https://source.boringavatars.com/marble/120/${user.firstname} ${user.lastname}?colors=fc6256,E9E5DC,00bd83,ffcfb5,CBD5FF`
 function getLikes() {
     console.log(user)
+    document.getElementById("likebutton").classList.toggle('button_inverse');
+    document.getElementById("rentbutton").classList.toggle('button_inverse');
+
     fetch('https://dimetrondon-backend.onrender.com/getLikesOfuSER/' + user.iduser)
         .then(e => e.json())
         .then(data => {
@@ -25,8 +28,7 @@ function getLikes() {
                     test.append(source)
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
                     test.addEventListener('click', () => {
-                        emitToDisplay(e.idart);
-
+                        window.location.href = './artwork.html?id=' + e.idart;
                     })
 
                 } else if (e.idgenre == 1) {
@@ -36,12 +38,10 @@ function getLikes() {
                     blur.classList.add('blur')
                     test.src = "https://dimetrodon.fr/files/" + e.file.split('.')[0] + '.jpg';
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
-
                     test.addEventListener('click', () => {
-                        emitToDisplay(e.idart);
-
-
+                        window.location.href = './artwork.html?id=' + e.idart;
                     })
+
 
 
 
@@ -53,7 +53,7 @@ function getLikes() {
                     test.src = "https://dimetrodon.fr/files/" + e.file;
                     blur.src = "https://dimetrodon.fr/files/" + e.file;
                     test.addEventListener('click', () => {
-                        emitToDisplay(e.idart);
+                        window.location.href = './artwork.html?id=' + e.idart;
                     })
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
 
@@ -64,6 +64,9 @@ function getLikes() {
 
 }
 function getRents() {
+    document.getElementById("rentbutton").classList.toggle('button_inverse');
+    document.getElementById("likebutton").classList.toggle('button_inverse');
+    
     fetch('https://dimetrondon-backend.onrender.com/getRentOfUser/' + JSON.parse(Cookies.get('user')).iduser)
         .then(e => e.json())
         .then(data => {
@@ -83,8 +86,7 @@ function getRents() {
                     test.append(source)
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
                     test.addEventListener('click', () => {
-                        emitToDisplay(e.idart);
-
+                        window.location.href = './artwork.html?id=' + e.idart;
                     })
 
                 } else if (e.idgenre == 1) {
@@ -94,12 +96,10 @@ function getRents() {
                     blur.classList.add('blur')
                     test.src = "https://dimetrodon.fr/files/" + e.file.split('.')[0] + '.jpg';
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
-
                     test.addEventListener('click', () => {
-                        emitToDisplay(e.idart);
-
-
+                        window.location.href = './artwork.html?id=' + e.idart;
                     })
+
 
 
 
@@ -111,7 +111,7 @@ function getRents() {
                     test.src = "https://dimetrodon.fr/files/" + e.file;
                     blur.src = "https://dimetrodon.fr/files/" + e.file;
                     test.addEventListener('click', () => {
-                        emitToDisplay(e.idart);
+                        window.location.href = './artwork.html?id=' + e.idart;
                     })
                     document.querySelectorAll('.column')[i % 2].appendChild(test)
 
@@ -126,6 +126,7 @@ getLikes()
 
 
 document.getElementById("likebutton").addEventListener('click', () => {
+    
     document.querySelectorAll('.column')[0].innerHTML = ""
     document.querySelectorAll('.column')[1].innerHTML = ""
 

@@ -18,8 +18,11 @@ h3 {
 
 .artbutton {
     padding: 0 15% 0 15%;
+    width: 100%;
 }
-
+.artbutton button{
+    min-width: 40% !important;
+}
 .arttext {
     margin-top: 30px;
 }

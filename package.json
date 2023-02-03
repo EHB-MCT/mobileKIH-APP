@@ -27,6 +27,7 @@
     "js-cookie": "^3.0.1",
     "lightpick": "^1.6.2",
     "lodash": "^4.17.21",
+    "node-camera-qr-reader": "^1.0.2",
     "qr-scanner": "^1.4.2",
     "socket.io": "^4.5.4",
     "style-loader": "^3.3.1",

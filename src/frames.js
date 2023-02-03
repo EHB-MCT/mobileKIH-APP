@@ -91,6 +91,7 @@ fetch('https://dimetrondon-backend.onrender.com/getUserRoomsFrames/' + userId)
             iv.classList.add('bx');
             iv.classList.add('bxs-cog');
             iv.classList.add('settings');
+            console.log(element);
             iv.addEventListener('click', () => {
                 window.location.href = './oneFrameEx.html?id=' + element.guid;
 

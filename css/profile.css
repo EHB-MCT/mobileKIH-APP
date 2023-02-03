@@ -28,6 +28,20 @@ h6{
 .artbutton{
 	margin-top: 10px;
 }
+.button_inverse{
+    background-color: #080809;
+    color: #00bd83;
+    border: 1px solid #00bd83;
+}
+
+.artbutton{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.artbutton button{
+    min-width: 80% !important;
+}
 .liked-and-rented-wrapper {
     margin-top: 30px;
 }
